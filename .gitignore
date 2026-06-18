@@ -26,3 +26,7 @@ venv/
 # 编辑器
 .idea/
 *.swp
+
+# MkDocs 本地构建产物
+_site/
+.cache/
