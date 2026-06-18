@@ -1,94 +1,119 @@
 <!DOCTYPE html>
 <!--
-  自测卷模板（自包含，无需联网，可直接打印）
-  生成试卷时：复制本文件 → 替换 {{占位}} → 填入题目与答案 → 存到 subjects/<科目>/试卷/自测卷/
-  设计：默认隐藏答案与解析（点"显示答案"展开），方便先做后对。
+  自测卷模板（自包含·可打印·答案可折叠）—— 这是"已验证的优质骨架"，照它产出即可稳定达标。
+  用法：复制本文件 → 改 {{占位}} → 按"题块样例"复制粘贴填题 → 存到 subjects/<科目>/<册次>/试卷/自测卷/
+  设计：① 默认隐藏答案（点 details 展开，或用顶部按钮一键开关）② 上半部"复习资料"可选、下半部"自测卷"必有，中间 .pagebreak 分页
+  铁律（保证稳定）：
+   - 公式一律用 Unicode 上下标（a<sup>2</sup>、x²、½、≥、∥、≌、°），【禁止】LaTeX/MathJax —— 本文件离线打开，无公式库会显示成乱码。
+   - 每题必带 <span class="kp">[考点：…]</span>，方便做完反查薄弱点。
+   - 无法插图的题（几何图/坐标图/地图）→ 用文字把图的关键信息描述清楚（各点坐标、各段起止、方位），不要留"如图"却没有图。
+   - 答案区 .ans 给结论、.sol 给思路解析（体现怎么想，不只给结果）。
+   - 出完按 SKILL.md「出卷后自检清单」逐条核对再交付。
 -->
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{科目}}自测卷 · {{范围}}</title>
+<title>{{科目}} · {{范围}}</title>
 <style>
-  :root { --ink:#1f2937; --line:#d1d5db; --soft:#6b7280; --brand:#2563eb; }
+  :root { --ink:#1f2937; --line:#d1d5db; --soft:#6b7280; --brand:#2563eb; --warn:#b45309; --ok:#047857; }
   * { box-sizing: border-box; }
-  body { font-family: "PingFang SC","Microsoft YaHei",system-ui,sans-serif;
-         color: var(--ink); max-width: 820px; margin: 24px auto; padding: 0 20px; line-height: 1.8; }
-  header { border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 8px; }
-  h1 { font-size: 22px; margin: 0 0 6px; }
-  .meta { color: var(--soft); font-size: 14px; display: flex; gap: 20px; flex-wrap: wrap; }
-  .fill { border-bottom: 1px solid var(--ink); display: inline-block; min-width: 120px; }
-  .tip { background:#eff6ff; border-left:4px solid var(--brand); padding:8px 12px; font-size:14px; color:#1e40af; margin:14px 0; border-radius:4px; }
-  .section { font-weight: 700; font-size: 17px; margin: 22px 0 10px; color: var(--brand); }
-  .q { margin: 16px 0; padding-left: 4px; }
-  .q .stem { font-weight: 500; }
-  .q .kp { font-size: 12px; color: var(--soft); margin-left: 6px; }
-  .options { margin: 6px 0 0 16px; }
-  .options div { margin: 3px 0; }
-  .answerline { border-bottom: 1px solid var(--line); height: 28px; margin-top: 8px; }
-  details { margin-top: 8px; background:#f9fafb; border:1px solid var(--line); border-radius:6px; padding:6px 12px; }
-  summary { cursor: pointer; color: var(--brand); font-size: 14px; font-weight:600; }
-  .ans { color:#047857; font-weight:600; }
-  .sol { color: var(--ink); font-size: 14px; margin-top:4px; }
-  .toolbar { text-align:right; margin: 10px 0; }
-  button { background: var(--brand); color:#fff; border:0; padding:6px 14px; border-radius:6px; cursor:pointer; font-size:14px; }
+  body { font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+         color:var(--ink); max-width:860px; margin:24px auto; padding:0 20px; line-height:1.85; font-size:15px; }
+  header { border-bottom:2px solid var(--ink); padding-bottom:12px; margin-bottom:8px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  h2 { font-size:18px; color:var(--brand); margin:28px 0 10px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  h3 { font-size:16px; margin:18px 0 8px; }
+  .meta { color:var(--soft); font-size:14px; }
+  .tip  { background:#eff6ff; border-left:4px solid var(--brand); padding:8px 12px; font-size:14px; color:#1e40af; margin:14px 0; border-radius:4px; }
+  .warn { background:#fffbeb; border-left:4px solid var(--warn);  padding:8px 12px; font-size:14px; color:#92400e; margin:14px 0; border-radius:4px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 16px; font-size:14px; }
+  th,td { border:1px solid var(--line); padding:6px 10px; text-align:left; vertical-align:top; }
+  th { background:#f3f4f6; font-weight:600; }
+  ul { margin:6px 0; padding-left:22px; } li { margin:3px 0; }
+  .section { font-weight:700; font-size:17px; margin:22px 0 10px; color:var(--brand); }
+  .q { margin:16px 0; }
+  .kp { font-size:12px; color:var(--soft); }
+  .options div { margin:3px 0 3px 16px; }
+  .fill { border-bottom:1px solid var(--ink); display:inline-block; min-width:100px; }
+  .answerline { border-bottom:1px solid var(--line); height:28px; margin-top:8px; }
+  details { margin-top:8px; background:#f9fafb; border:1px solid var(--line); border-radius:6px; padding:6px 12px; }
+  summary { cursor:pointer; color:var(--brand); font-size:14px; font-weight:600; }
+  .ans { color:var(--ok); font-weight:600; }
+  .sol { font-size:14px; margin-top:4px; }
+  .toolbar { text-align:right; margin:10px 0; position:sticky; top:0; background:#fff; padding:8px 0; z-index:10; }
+  button { background:var(--brand); color:#fff; border:0; padding:6px 14px; border-radius:6px; cursor:pointer; font-size:14px; margin-left:6px; }
+  .pagebreak { page-break-before:always; margin-top:40px; padding-top:20px; border-top:3px double var(--ink); }
   @media print {
-    .toolbar { display:none; }
-    details { border:none; background:none; }
-    details summary { display:none; }
-    details[open] .ans, details[open] .sol { display:block; }
-    details:not([open]) { display:none; }   /* 打印空白卷时不展开答案 */
+    .toolbar { display:none; } .no-print-tip { display:none; }
+    details { border:none; background:none; }       /* 打印时去掉答案框底纹 */
+    details:not([open]) summary { display:none; }    /* 打印空白卷：不展开就连"显示答案"也不印 */
   }
 </style>
 </head>
 <body>
+
+<!-- ========== 上半部：复习资料（可选，期末/全册卷建议带；单元小卷可删整段，从 .pagebreak 后开始） ========== -->
 <header>
-  <h1>{{科目}}自测卷 · {{范围}}</h1>
+  <h1>{{科目}} · {{册次}} · {{范围}} 复习资料</h1>
+  <div class="meta">{{版本}} · 小雨 · {{日期}}</div>
+</header>
+<div class="tip no-print-tip">📌 用法：先通读复习资料 → 合书默背关键表格 → 再做下半部自测卷（不计分）。</div>
+
+<h2>一、{{章节名}}</h2>
+<table>
+  <tr><th>{{表头}}</th><th>{{表头}}</th></tr>
+  <tr><td>{{要点}}</td><td>{{要点}}</td></tr>
+</table>
+<div class="warn">⚠️ 头号坑：{{本章最易错的一两点}}</div>
+
+<h2>{{……其余章节同上……}}</h2>
+
+<h2>期末猜题（高频考点预测，非真题）</h2>
+<div class="warn">⚠️ 以下是结合知识库易错点与命题习惯的<strong>考点预测，不是真题</strong>，仅帮你把复习重点压到最可能考处。</div>
+<table>
+  <tr><th>#</th><th>预测考点</th><th>可能题型</th></tr>
+  <tr><td>1</td><td>{{考点}}</td><td>{{题型}}</td></tr>
+</table>
+
+<!-- ========== 下半部：自测卷（必有） ========== -->
+<div class="pagebreak">
+<header>
+  <h1>{{科目}} · {{范围}} 自测卷（模拟）</h1>
   <div class="meta">
     <span>姓名：<span class="fill">小雨</span></span>
-    <span>日期：<span class="fill">{{日期}}</span></span>
+    <span>日期：{{日期}}</span>
     <span>用时：<span class="fill"></span>分钟</span>
-    <span>得分：<span class="fill"></span></span>
+    <span>建议限时：{{N}}分钟</span>
   </div>
 </header>
-
-<div class="tip">本卷针对薄弱点定制：{{薄弱点说明}}。先独立做完，再点每题"显示答案"对照。</div>
-
+<div class="tip">不计分，是学习工具。先独立做完（计算/证明要写过程），再点"显示全部答案"对照。难度配比 ≈ {{基础:中档:压轴，分数科6:3:1 / 等级科7:2:1}}。</div>
 <div class="toolbar">
   <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">显示全部答案</button>
   <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">隐藏全部答案</button>
 </div>
 
-<!-- ================= 一、选择题 ================= -->
+<!-- ——— 选择题题块样例（复制此块改内容） ——— -->
 <div class="section">一、选择题</div>
-
-<div class="q">
-  <span class="stem">1. {{题干}}<span class="kp">[考点：{{知识点}}]</span></span>
-  <div class="options">
-    <div>A. {{选项}}</div>
-    <div>B. {{选项}}</div>
-    <div>C. {{选项}}</div>
-    <div>D. {{选项}}</div>
-  </div>
-  <details>
-    <summary>显示答案与解析</summary>
-    <div class="ans">答案：{{答案}}</div>
-    <div class="sol">解析：{{解析}}</div>
-  </details>
+<div class="q">1. {{题干}} <span class="kp">[考点：{{知识点}}]</span>
+  <div class="options"><div>A. {{选项}}</div><div>B. {{选项}}</div><div>C. {{选项}}</div><div>D. {{选项}}</div></div>
+  <details><summary>答案与解析</summary><div class="ans">{{答案字母}}</div><div class="sol">{{解析：为什么选它、为什么排除其他}}</div></details>
 </div>
 
-<!-- ================= 二、填空 / 简答题 ================= -->
+<!-- ——— 填空/简答题块样例 ——— -->
 <div class="section">二、填空 / 简答题</div>
-
-<div class="q">
-  <span class="stem">2. {{题干}}<span class="kp">[考点：{{知识点}}]</span></span>
+<div class="q">2. {{题干，空处用}} ______ <span class="kp">[考点：{{知识点}}]</span>
   <div class="answerline"></div>
-  <details>
-    <summary>显示答案与解析</summary>
-    <div class="ans">答案：{{答案}}</div>
-    <div class="sol">解析：{{解析}}</div>
-  </details>
+  <details><summary>答案与解析</summary><div class="ans">{{答案}}</div><div class="sol">{{解析}}</div></details>
 </div>
 
+<!-- ——— 计算/证明/应用题块样例（多留几行答题区） ——— -->
+<div class="section">三、解答题（要写过程）</div>
+<div class="q">3. {{题干；几何/图象题在此用文字描述图的关键信息}} <span class="kp">[考点：{{知识点}}]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">{{结论}}</div><div class="sol">{{完整分步过程}}</div></details>
+</div>
+
+</div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 ---
 学科: 英语
 单元: Unit 6 Rain or Shine
-说明: markmap 风格大纲；单元英文名 ⚠️待核对课本
+说明: markmap 风格大纲；单元英文名 Rain or Shine（人教 2024 七下官方目录）
 ---
 
 # Unit 6 Rain or Shine

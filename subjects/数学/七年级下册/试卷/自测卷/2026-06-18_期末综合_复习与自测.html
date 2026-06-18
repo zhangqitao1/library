@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--
+  数学七下 · 期末综合复习与自测卷（自包含·可打印·答案可折叠）
+  铁律：公式只用 Unicode（a²、≥、∥、≌、°、½、±、÷、≠、≤、△、∠），禁止 LaTeX/MathJax；几何题用文字讲清图的关键信息；不含任何个人隐私。
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数学七下 · 期末综合复习与自测（北师大版）</title>
+<style>
+  :root { --ink:#1f2937; --line:#d1d5db; --soft:#6b7280; --brand:#2563eb; --warn:#b45309; --ok:#047857; }
+  * { box-sizing: border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+         color:var(--ink); max-width:860px; margin:24px auto; padding:0 20px; line-height:1.85; font-size:15px; }
+  header { border-bottom:2px solid var(--ink); padding-bottom:12px; margin-bottom:8px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  h2 { font-size:18px; color:var(--brand); margin:28px 0 10px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  h3 { font-size:16px; margin:18px 0 8px; }
+  .meta { color:var(--soft); font-size:14px; }
+  .tip  { background:#eff6ff; border-left:4px solid var(--brand); padding:8px 12px; font-size:14px; color:#1e40af; margin:14px 0; border-radius:4px; }
+  .warn { background:#fffbeb; border-left:4px solid var(--warn);  padding:8px 12px; font-size:14px; color:#92400e; margin:14px 0; border-radius:4px; }
+  .mat  { background:#f8fafc; border:1px dashed var(--soft); padding:10px 14px; margin:8px 0; border-radius:4px; font-size:14px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 16px; font-size:14px; }
+  th,td { border:1px solid var(--line); padding:6px 10px; text-align:left; vertical-align:top; }
+  th { background:#f3f4f6; font-weight:600; }
+  ul { margin:6px 0; padding-left:22px; } li { margin:3px 0; }
+  .section { font-weight:700; font-size:17px; margin:22px 0 10px; color:var(--brand); }
+  .q { margin:16px 0; }
+  .kp { font-size:12px; color:var(--soft); }
+  .options div { margin:3px 0 3px 16px; }
+  .fill { border-bottom:1px solid var(--ink); display:inline-block; min-width:100px; }
+  .answerline { border-bottom:1px solid var(--line); height:28px; margin-top:8px; }
+  details { margin-top:8px; background:#f9fafb; border:1px solid var(--line); border-radius:6px; padding:6px 12px; }
+  summary { cursor:pointer; color:var(--brand); font-size:14px; font-weight:600; }
+  .ans { color:var(--ok); font-weight:600; }
+  .sol { font-size:14px; margin-top:4px; }
+  .toolbar { text-align:right; margin:10px 0; position:sticky; top:0; background:#fff; padding:8px 0; z-index:10; }
+  button { background:var(--brand); color:#fff; border:0; padding:6px 14px; border-radius:6px; cursor:pointer; font-size:14px; margin-left:6px; }
+  .pagebreak { page-break-before:always; margin-top:40px; padding-top:20px; border-top:3px double var(--ink); }
+  @media print {
+    .toolbar { display:none; } .no-print-tip { display:none; }
+    details { border:none; background:none; }
+    details:not([open]) summary { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== 上半部：复习思路 + 记忆要点 ========== -->
+<header>
+  <h1>数学 · 七年级下册 · 期末复习思路与记忆要点</h1>
+  <div class="meta">北师大版2024 · 2026-06-18 · 全册六章 · 配套下方综合自测卷</div>
+</header>
+
+<div class="tip no-print-tip">📌 用法：先通读这份复习要点 → 合书把每张表"默背 + 自己讲一遍" → 再做下半部自测卷（不计分）。数学靠"懂概念 + 算规范 + 错题归零"，不是盲刷。</div>
+
+<h2>一、各章期末重点与高频题型</h2>
+<table>
+  <tr><th>章</th><th>期末重点</th><th>高频题型</th></tr>
+  <tr><td>第一章 整式的乘除</td><td>幂三法则、平方差、完全平方、整式乘除（全册计算量最大的一章）</td><td>选择/填空计算、化简求值、整体代换（已知 a±b、ab 求 a²+b²）</td></tr>
+  <tr><td>第二章 相交线与平行线</td><td>对顶角/邻补角、平行的"判定 ↔ 性质"、同位角/内错角/同旁内角</td><td>填空求角、平行的几何证明（书写格式题）</td></tr>
+  <tr><td>第三章 三角形</td><td>三边关系、内角和与外角、全等判定 SSS/SAS/ASA/AAS/HL</td><td>选择辨析、全等证明（压轴常在此）</td></tr>
+  <tr><td>第四章 变量之间的关系</td><td>自变量/因变量、表格·关系式·图象三种表示、读图</td><td>列关系式、读 s-t 图分段求速度的应用题</td></tr>
+  <tr><td>第五章 生活中的轴对称</td><td>对称轴条数、对称点性质、等腰/等边三角形、三线合一</td><td>选择/填空、等腰分类讨论求角</td></tr>
+  <tr><td>第六章 概率初步</td><td>必然/不可能/随机、等可能 P=m/n、频率估计概率</td><td>填空求概率、转盘/摸球列举求概率</td></tr>
+</table>
+
+<h2>二、核心公式 / 定理 / 法则速查（合书要能默写）</h2>
+<table>
+  <tr><th>板块</th><th>公式 / 定理（全用 Unicode）</th></tr>
+  <tr><td>同底数幂乘除</td><td>aᵐ·aⁿ = aᵐ⁺ⁿ（底不变指数相加）；aᵐ÷aⁿ = aᵐ⁻ⁿ（a≠0，指数相减）</td></tr>
+  <tr><td>幂的乘方·积的乘方</td><td>(aᵐ)ⁿ = aᵐⁿ（指数相乘）；(ab)ⁿ = aⁿbⁿ（每个因式都要乘方）</td></tr>
+  <tr><td>零指数·负指数</td><td>a⁰ = 1（a≠0）；a⁻ⁿ = 1/aⁿ（a≠0）</td></tr>
+  <tr><td>平方差公式</td><td>(a+b)(a−b) = a²−b²（"和 × 差 = 平方差"）</td></tr>
+  <tr><td>完全平方公式</td><td>(a±b)² = a² ± 2ab + b²（首² ± 2×首×尾 + 尾²，中间别漏 2ab）</td></tr>
+  <tr><td>整体代换常用</td><td>a²+b² = (a+b)²−2ab = (a−b)²+2ab</td></tr>
+  <tr><td>相交线</td><td>对顶角相等；邻补角互补（和 = 180°）；点到直线的距离 = 垂线段长</td></tr>
+  <tr><td>平行 判定</td><td>同位角相等 / 内错角相等 / 同旁内角互补（和180°）⇒ 两直线平行</td></tr>
+  <tr><td>平行 性质</td><td>两直线平行 ⇒ 同位角相等 / 内错角相等 / 同旁内角互补</td></tr>
+  <tr><td>三角形</td><td>两边之和 > 第三边，两边之差 < 第三边；内角和 = 180°；外角 = 不相邻两内角之和</td></tr>
+  <tr><td>全等判定</td><td>SSS、SAS（夹角）、ASA、AAS、HL（仅直角△：斜边+直角边）；SSA 一般不行</td></tr>
+  <tr><td>轴对称</td><td>对称点连线被对称轴垂直平分；等腰△两底角相等、三线合一；等边△三角都 60°</td></tr>
+  <tr><td>对称轴条数</td><td>长方形 2 条、正方形 4 条、等边三角形 3 条、圆无数条</td></tr>
+  <tr><td>概率</td><td>等可能：P = m/n（有利数÷总数）；0 ≤ P ≤ 1；必然 P=1，不可能 P=0；所有结果概率之和 = 1</td></tr>
+</table>
+
+<h2>三、高频易错点（考前最后扫一遍）</h2>
+<table>
+  <tr><th>易错处</th><th>正确做法</th></tr>
+  <tr><td>同底数幂乘 vs 幂的乘方</td><td>a³·a² = a⁵（相加）；(a³)² = a⁶（相乘），别混</td></tr>
+  <tr><td>积的乘方漏系数</td><td>(2xy)² = 4x²y²，(−2a²b)³ = −8a⁶b³，系数也要乘方</td></tr>
+  <tr><td>完全平方头号坑</td><td>(a+b)² ≠ a²+b²，中间必须有 ±2ab</td></tr>
+  <tr><td>平方差 vs 完全平方</td><td>(a+b)(a−b) 才是平方差；(a+b)(a+b)=(a+b)² 是完全平方</td></tr>
+  <tr><td>判定 vs 性质方向</td><td>角相等 → 平行（判定）；平行 → 角相等（性质），别用反</td></tr>
+  <tr><td>同旁内角</td><td>是互补（和180°），不是相等</td></tr>
+  <tr><td>SAS 的角</td><td>必须是两边的夹角；SSA（边边角）一般不能证全等</td></tr>
+  <tr><td>等腰三角形求角</td><td>给"一个内角"未说顶角/底角时要分类讨论</td></tr>
+  <tr><td>读 s-t 图</td><td>先看清横纵轴是谁；水平段 = 路程不变（休息）；速度看增量比</td></tr>
+  <tr><td>概率分母</td><td>必须先确认"等可能"，列举不重不漏，答案化最简分数</td></tr>
+</table>
+
+<h2>四、常见题型解题套路（背下来直接套）</h2>
+<ul>
+  <li><strong>整式化简求值 → 三步</strong>：① 用乘法公式 / 去括号展开 → ② 合并同类项化到最简 → ③ 最后才代入数值（负数代入要加括号）。</li>
+  <li><strong>整体代换 → 凑公式</strong>：见到"已知 a+b、ab 求 a²+b²"，套 a²+b² = (a+b)²−2ab，把已知整体代进去，别去解 a、b。</li>
+  <li><strong>平行线几何证明 → 书写格式</strong>：写"∵（已知/已证的角相等条件）→ ∴ 两直线平行（写清依据：同位角相等/内错角相等/同旁内角互补）"。每一步都要有依据，不能跳。两平行线间有拐点时，过拐点作平行线（辅助线），把大角拆成两个内错角。</li>
+  <li><strong>全等证明 → 三对 + 依据</strong>：先找齐 3 个对应相等条件（公共边、对顶角、平行得到的角是隐藏条件），按"在△…与△…中，∵…∴≌（SSS/SAS/ASA/AAS/HL）"书写；要对应边 / 对应角时先证全等再用。</li>
+  <li><strong>变量应用题 → 三步</strong>：① 定自变量、因变量 → ② 因变量写左边、用自变量列关系式 → ③ 代入或读图作答（注意取值范围，如时间≥0、边长&gt;0）。</li>
+  <li><strong>概率题 → 三步</strong>：① 列出所有等可能结果（不重不漏）→ ② 数有利结果数 m → ③ P = m/n 化最简分数；必然写 1、不可能写 0。</li>
+</ul>
+
+<h2>五、期末猜题（结合易错点与命题习惯，非真题）</h2>
+<div class="warn">⚠️ 下面是结合知识库易错点与济南质量监测命题习惯押的<strong>最可能考方向，不是真题</strong>，用来把复习重点压到最可能考处。</div>
+<table>
+  <tr><th>#</th><th>预测考点</th><th>可能题型</th></tr>
+  <tr><td>1</td><td>幂三法则混用 + 积的乘方系数</td><td>选择/填空计算</td></tr>
+  <tr><td>2</td><td>完全平方 / 平方差 + 整体代换</td><td>填空、化简求值、压轴代换</td></tr>
+  <tr><td>3</td><td>平行线"判定↔性质"+ 拐点模型</td><td>几何证明（书写格式）</td></tr>
+  <tr><td>4</td><td>三角形全等（SAS / 隐藏条件）</td><td>压轴证明题</td></tr>
+  <tr><td>5</td><td>读 s-t 图分段求速度</td><td>情境应用题</td></tr>
+  <tr><td>6</td><td>等腰三角形分类讨论求角</td><td>填空（易漏一种情况）</td></tr>
+  <tr><td>7</td><td>转盘 / 摸球求概率（含必然、不可能）</td><td>解答题</td></tr>
+</table>
+
+<!-- ========== 下半部：期末综合自测卷 ========== -->
+<div class="pagebreak">
+<header>
+  <h1>数学七下 · 期末综合自测卷（模拟）</h1>
+  <div class="meta">
+    <span>姓名：<span class="fill"></span></span>
+    <span>日期：2026-06-18</span>
+    <span>测试类型：期末综合模拟</span>
+    <span>用时：<span class="fill"></span>分钟</span>
+    <span>建议限时：70分钟</span>
+  </div>
+  <div class="meta">科目：数学（北师大版2024） · 范围：七下全册（第一至第六章） · 难度配比 ≈ 基础6 : 中档3 : 压轴1</div>
+</header>
+<div class="tip">不计分，是学习工具。先独立做完（计算/证明都要写过程），再点"显示全部答案"对照。本卷多用新情境、换数字，专治"换个说法就不会"。</div>
+<div class="toolbar">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">显示全部答案</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">隐藏全部答案</button>
+</div>
+
+<div class="section">一、选择题（每题3分，共30分）</div>
+
+<div class="q">1. 下列计算正确的是 <span class="kp">[考点：幂的运算法则（难度：基础）]</span>
+  <div class="options"><div>A. a²·a³ = a⁶</div><div>B. (a²)³ = a⁵</div><div>C. a⁶÷a² = a⁴</div><div>D. (2a)² = 2a²</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">同底数幂相除指数相减：a⁶÷a² = a⁴，C 对。A 应是 a⁵（相加）；B 应是 a⁶（相乘）；D 应是 4a²（系数也要平方）。</div></details>
+</div>
+
+<div class="q">2. 计算 (x+2)² 的结果是 <span class="kp">[考点：完全平方公式（难度：基础）]</span>
+  <div class="options"><div>A. x²+4</div><div>B. x²+2x+4</div><div>C. x²+4x+4</div><div>D. x²+4x+2</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">(a+b)² = a²+2ab+b²，这里 a=x、b=2：x² + 2·x·2 + 2² = x²+4x+4。漏掉中间 4x 就会误选 A。</div></details>
+</div>
+
+<div class="q">3. 2⁻³ 的值是 <span class="kp">[考点：负指数幂（难度：基础）]</span>
+  <div class="options"><div>A. 1/8</div><div>B. −8</div><div>C. −6</div><div>D. −1/8</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">负指数变倒数：2⁻³ = 1/2³ = 1/8。负指数不会让结果变负数。</div></details>
+</div>
+
+<div class="q">4. 直线 AB 与 CD 被第三条直线所截，AB∥CD。若一对同旁内角中的 ∠1 = 110°，则与它同旁的内角 ∠2 = <span class="kp">[考点：平行线性质·同旁内角（难度：基础）]</span>
+  <div class="options"><div>A. 70°</div><div>B. 110°</div><div>C. 20°</div><div>D. 90°</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">两直线平行，同旁内角互补（和 = 180°）：∠2 = 180° − 110° = 70°。注意同旁内角是"互补"不是"相等"。</div></details>
+</div>
+
+<div class="q">5. 下列各组线段（单位：cm）能组成三角形的是 <span class="kp">[考点：三角形三边关系（难度：基础）]</span>
+  <div class="options"><div>A. 1, 2, 3</div><div>B. 3, 4, 8</div><div>C. 3, 4, 5</div><div>D. 2, 2, 5</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">判定：最短两边之和要大于第三边。C 中 3+4=7 &gt; 5，可以。A 中 1+2=3 不大于 3；B 中 3+4=7 &lt; 8；D 中 2+2=4 &lt; 5，都不行。</div></details>
+</div>
+
+<div class="q">6. 三角形的一个外角等于 120°，与它不相邻的一个内角是 50°，则与它不相邻的另一个内角是 <span class="kp">[考点：三角形外角性质（难度：中档）]</span>
+  <div class="options"><div>A. 60°</div><div>B. 70°</div><div>C. 50°</div><div>D. 120°</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">外角 = 与它不相邻的两个内角之和：120° = 50° + 另一个内角，所以另一个内角 = 120° − 50° = 70°。</div></details>
+</div>
+
+<div class="q">7. 两个三角形满足"两条边及它们的夹角对应相等"，判定它们全等的依据是 <span class="kp">[考点：全等判定（难度：中档）]</span>
+  <div class="options"><div>A. SSS</div><div>B. SAS</div><div>C. ASA</div><div>D. SSA</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">两边及"夹角"对应相等是 SAS。注意角必须是两边的夹角；SSA（两边及其中一边的对角）一般不能判定全等。</div></details>
+</div>
+
+<div class="q">8. 下列图形中，对称轴条数最多的是 <span class="kp">[考点：轴对称·对称轴（难度：基础）]</span>
+  <div class="options"><div>A. 长方形</div><div>B. 正方形</div><div>C. 等边三角形</div><div>D. 等腰三角形</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">长方形 2 条、正方形 4 条、等边三角形 3 条、等腰三角形 1 条，正方形最多。</div></details>
+</div>
+
+<div class="q">9. 掷一枚均匀骰子一次，朝上的点数大于 4 的概率是 <span class="kp">[考点：等可能事件概率（难度：基础）]</span>
+  <div class="options"><div>A. 1/2</div><div>B. 1/3</div><div>C. 1/6</div><div>D. 2/3</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">共 6 种等可能结果，大于 4 的是 5、6 共 2 种，P = 2/6 = 1/3。</div></details>
+</div>
+
+<div class="q">10. 一根弹簧原长 10 cm，在弹性限度内每挂 1 kg 重物伸长 0.5 cm。挂 x kg 时弹簧长 y cm，则 y 与 x 的关系式为 y = 10 + 0.5x。当挂 6 kg 时弹簧长为 <span class="kp">[考点：用关系式表示变量关系（难度：基础）]</span>
+  <div class="options"><div>A. 13 cm</div><div>B. 16 cm</div><div>C. 3 cm</div><div>D. 10 cm</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">把 x = 6 代入：y = 10 + 0.5×6 = 10 + 3 = 13（cm）。这里 x 是自变量、y 是因变量。</div></details>
+</div>
+
+<div class="section">二、填空题（每题3分，共24分）</div>
+
+<div class="q">11. 计算：(−2a²b)³ = ______ <span class="kp">[考点：积的乘方（难度：基础）]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">−8a⁶b³</div><div class="sol">每个因式都要乘方：(−2)³ = −8，(a²)³ = a⁶，b³ = b³，合起来 −8a⁶b³。系数的符号和乘方都别漏。</div></details>
+</div>
+
+<div class="q">12. 计算：(3a+2b)(3a−2b) = ______ <span class="kp">[考点：平方差公式（难度：基础）]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">9a²−4b²</div><div class="sol">"和 × 差 = 平方差"：(3a)² − (2b)² = 9a² − 4b²。</div></details>
+</div>
+
+<div class="q">13. 若 x² + kx + 9 是一个完全平方式，则 k = ______ <span class="kp">[考点：完全平方式（难度：中档）]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">±6</div><div class="sol">完全平方式形如 (x±3)²，因为尾项 9 = 3²。中间项 2×x×3 = 6x，所以 k = +6（对应 (x+3)²）或 k = −6（对应 (x−3)²）。两个解都要写，别漏负的。</div></details>
+</div>
+
+<div class="q">14. 已知 a + b = 5，ab = 6，则 a² + b² = ______ <span class="kp">[考点：完全平方·整体代换（难度：中档）]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">13</div><div class="sol">用 a²+b² = (a+b)² − 2ab = 5² − 2×6 = 25 − 12 = 13。整体代换，不需要去求 a、b 各是多少。</div></details>
+</div>
+
+<div class="q">15. 在 △ABC 中，∠A = 70°，∠B = 60°，则 ∠C = ______ <span class="kp">[考点：三角形内角和（难度：基础）]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">50°</div><div class="sol">三角形内角和 180°：∠C = 180° − 70° − 60° = 50°。</div></details>
+</div>
+
+<div class="q">16. 等腰三角形的一个内角为 80°，则它的顶角为 ______ <span class="kp">[考点：等腰三角形·分类讨论（难度：中档）]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">80° 或 20°</div><div class="sol">题目没说 80° 是顶角还是底角，要分两种：① 80° 是顶角，则顶角 = 80°；② 80° 是底角，则两底角共 160°，顶角 = 180° − 160° = 20°。漏掉一种就扣分。</div></details>
+</div>
+
+<div class="q">17. 一个不透明的袋中装有 3 个红球和 5 个白球，它们除颜色外都相同。从中随机摸出一个球，摸到白球的概率是 ______ <span class="kp">[考点：等可能事件概率（难度：基础）]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">5/8</div><div class="sol">共 3+5 = 8 个球，每个被摸到机会相同，白球 5 个，P(白) = 5/8（已是最简分数）。</div></details>
+</div>
+
+<div class="q">18. 一个水箱中有水 20 L，打开放水阀后每分钟流出 2 L。设放水 t 分钟后水箱剩水 Q L，则 Q 与 t 的关系式为 ______；水箱里的水全部放完需要 ______ 分钟。 <span class="kp">[考点：用关系式表示变量关系（难度：中档）]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">Q = 20 − 2t；10</div><div class="sol">剩水 = 原有 − 放掉，因变量 Q 写左边：Q = 20 − 2t（0 ≤ t ≤ 10）。放完即 Q = 0：20 − 2t = 0，解得 t = 10（分钟）。</div></details>
+</div>
+
+<div class="section">三、解答题（要写出过程，共46分）</div>
+
+<div class="q">19.（8分）计算：<br>（1）(−3x²y)·(2xy³)；<br>（2）(x+3)(x−5) − x(x−2)。 <span class="kp">[考点：整式乘法·混合运算（难度：基础）]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">（1）−6x³y⁴；（2）−15</div>
+  <div class="sol">（1）系数相乘 (−3)×2 = −6，同底数幂相乘 x²·x = x³、y·y³ = y⁴，得 −6x³y⁴。<br>（2）先各自展开：(x+3)(x−5) = x²−5x+3x−15 = x²−2x−15；x(x−2) = x²−2x。再相减：(x²−2x−15) − (x²−2x) = x²−2x−15 − x²+2x = −15。注意减号要变后一括号每一项的符号。</div></details>
+</div>
+
+<div class="q">20.（8分）先化简，再求值：(a+2)² + (a+2)(a−2)，其中 a = −1。 <span class="kp">[考点：乘法公式·化简求值（难度：基础）]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">化简得 2a² + 4a；当 a = −1 时，值为 −2</div>
+  <div class="sol">(a+2)² = a²+4a+4；(a+2)(a−2) = a²−4。相加：a²+4a+4 + a²−4 = 2a²+4a。代入 a = −1：2×(−1)² + 4×(−1) = 2×1 − 4 = 2 − 4 = −2。先化简到最简再代入，又快又少错。</div></details>
+</div>
+
+<div class="q">21.（8分）（图形用文字描述如下）两条水平直线 AB、CD，且 AB∥CD，AB 在上、CD 在下。点 P 在 AB 与 CD 之间，连接 PA、PC（A 在上方直线上，C 在下方直线上）。已知 PA 与 AB 所夹的角 ∠PAB = 40°，PC 与 CD 所夹的角 ∠PCD = 30°，且 P 落在使两角"一上一下相加"的位置。求 ∠APC 的度数。 <span class="kp">[考点：平行线性质·拐点作辅助线（难度：压轴）]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">∠APC = 70°</div>
+  <div class="sol">过点 P 作 PE∥AB（辅助线）。<br>∵ PE∥AB，∴ ∠APE = ∠PAB = 40°（两直线平行，内错角相等）。<br>∵ AB∥CD，PE∥AB，∴ PE∥CD，∴ ∠CPE = ∠PCD = 30°（内错角相等）。<br>∴ ∠APC = ∠APE + ∠CPE = 40° + 30° = 70°。<br>口诀：两平行线间有拐点，过拐点作平行线，大角拆成两个内错角相加。</div></details>
+</div>
+
+<div class="q">22.（8分）（图形用文字描述如下）点 B、E、C、F 依次在同一条直线上（顺序为 B、E、C、F）。已知 AB = DE，∠ABC = ∠DEF，BE = CF。求证：△ABC ≌ △DEF。 <span class="kp">[考点：全等判定·隐藏条件（难度：压轴）]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">△ABC ≌ △DEF（SAS）</div>
+  <div class="sol">先求第三个条件 BC = EF：<br>∵ B、E、C、F 在一条直线上，∴ BC = BE + EC，EF = EC + CF。<br>∵ BE = CF（已知），∴ BE + EC = CF + EC，即 BC = EF。<br>在 △ABC 与 △DEF 中：<br>AB = DE（已知），∠ABC = ∠DEF（已知），BC = EF（已证），<br>∴ △ABC ≌ △DEF（SAS）。<br>关键：BE = CF 两边同加 EC 凑出 BC = EF，这是隐藏条件。</div></details>
+</div>
+
+<div class="q">23.（8分）小明骑车去图书馆，他的"路程 s（km）随时间 t（min）变化"的图象是一条折线，分三段：第 1 段 0~20 min 匀速骑到距家 3 km 的同学家；第 2 段 20~30 min 在同学家停留；第 3 段 30~45 min 匀速骑到距家 6 km 的图书馆。<br>（1）这个问题中，自变量和因变量各是什么？<br>（2）第 1 段中小明的骑车速度是多少（km/h）？<br>（3）20~30 min 这段时间，路程 s 有没有变化？说明小明在做什么？<br>（4）第 3 段中小明的骑车速度是多少（km/h）？ <span class="kp">[考点：读 s-t 图象·分段求速度（难度：中档）]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">（1）自变量：时间 t；因变量：路程 s。（2）9 km/h。（3）路程不变，小明在停留（休息）。（4）12 km/h。</div>
+  <div class="sol">（2）第 1 段路程增 3 km，时间 20 min = 1/3 h，速度 = 3 ÷ (1/3) = 9（km/h）。<br>（3）图象在这段是水平的，s 不变，说明人没有前进，在同学家停留。<br>（4）第 3 段从 3 km 到 6 km，增 3 km，时间 30→45 共 15 min = 1/4 h，速度 = 3 ÷ (1/4) = 12（km/h）。速度要用"路程增量 ÷ 时间增量"，别用坐标乱除。</div></details>
+</div>
+
+<div class="q">24.（6分）一个可以自由转动的转盘被平均分成 6 个相同的扇形，依次标上数字 1、2、3、4、5、6。转动转盘，待其停止后指针指向某个扇形（指针指向边界忽略不计，每个扇形机会相同）。求：<br>（1）指针指向的数字是 3 的倍数的概率；<br>（2）指针指向的数字是质数的概率；<br>（3）指针指向的数字大于 6 的概率。 <span class="kp">[考点：等可能事件·必然与不可能（难度：中档）]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">（1）1/3；（2）1/2；（3）0</div>
+  <div class="sol">总共 6 种等可能结果。<br>（1）3 的倍数有 3、6 共 2 个，P = 2/6 = 1/3。<br>（2）质数有 2、3、5 共 3 个（1 不是质数，4、6 是合数），P = 3/6 = 1/2。<br>（3）1~6 没有大于 6 的，是不可能事件，P = 0。</div></details>
+</div>
+
+<div class="q">25.（10分）已知 a − b = 3，ab = 4。求：<br>（1）a² + b² 的值；<br>（2）(a + b)² 的值。 <span class="kp">[考点：完全平方公式·整体代换（难度：压轴）]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">（1）a² + b² = 17；（2）(a + b)² = 25</div>
+  <div class="sol">（1）由 (a−b)² = a² − 2ab + b² 得 a² + b² = (a−b)² + 2ab = 3² + 2×4 = 9 + 8 = 17。<br>（2）(a+b)² = a² + 2ab + b² = (a²+b²) + 2ab = 17 + 2×4 = 17 + 8 = 25。<br>两小题都靠"a²+b² 当整体"来回代换，不用真的解出 a、b。</div></details>
+</div>
+
+</div>
+</body>
+</html>
