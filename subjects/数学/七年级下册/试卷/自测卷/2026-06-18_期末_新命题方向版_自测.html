@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--
+  数学七下 · 期末 · 新命题方向版自测卷（自包含·可打印·答案可折叠）
+  对标 2026 济南中考新政命题方向：①减记忆增高阶 ②长情境先提取 ③跨学科+动态几何 ④重过程规范。
+  公式一律 Unicode 上下标，禁 LaTeX；无图题用文字写清各点/各段数据。
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数学 · 七年级下册 · 期末（新命题方向版）</title>
+<style>
+  :root { --ink:#1f2937; --line:#d1d5db; --soft:#6b7280; --brand:#2563eb; --warn:#b45309; --ok:#047857; }
+  * { box-sizing: border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+         color:var(--ink); max-width:860px; margin:24px auto; padding:0 20px; line-height:1.85; font-size:15px; }
+  header { border-bottom:2px solid var(--ink); padding-bottom:12px; margin-bottom:8px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  h2 { font-size:18px; color:var(--brand); margin:28px 0 10px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  h3 { font-size:16px; margin:18px 0 8px; }
+  .meta { color:var(--soft); font-size:14px; }
+  .meta span { margin-right:14px; }
+  .tip  { background:#eff6ff; border-left:4px solid var(--brand); padding:8px 12px; font-size:14px; color:#1e40af; margin:14px 0; border-radius:4px; }
+  .warn { background:#fffbeb; border-left:4px solid var(--warn);  padding:8px 12px; font-size:14px; color:#92400e; margin:14px 0; border-radius:4px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 16px; font-size:14px; }
+  th,td { border:1px solid var(--line); padding:6px 10px; text-align:left; vertical-align:top; }
+  th { background:#f3f4f6; font-weight:600; }
+  ul { margin:6px 0; padding-left:22px; } li { margin:3px 0; }
+  .section { font-weight:700; font-size:17px; margin:22px 0 10px; color:var(--brand); }
+  .q { margin:16px 0; }
+  .kp { font-size:12px; color:var(--soft); }
+  .options div { margin:3px 0 3px 16px; }
+  .fill { border-bottom:1px solid var(--ink); display:inline-block; min-width:100px; }
+  .answerline { border-bottom:1px solid var(--line); height:28px; margin-top:8px; }
+  details { margin-top:8px; background:#f9fafb; border:1px solid var(--line); border-radius:6px; padding:6px 12px; }
+  summary { cursor:pointer; color:var(--brand); font-size:14px; font-weight:600; }
+  .ans { color:var(--ok); font-weight:600; }
+  .sol { font-size:14px; margin-top:4px; }
+  .toolbar { text-align:right; margin:10px 0; position:sticky; top:0; background:#fff; padding:8px 0; z-index:10; }
+  button { background:var(--brand); color:#fff; border:0; padding:6px 14px; border-radius:6px; cursor:pointer; font-size:14px; margin-left:6px; }
+  .pagebreak { page-break-before:always; margin-top:40px; padding-top:20px; border-top:3px double var(--ink); }
+  @media print {
+    .toolbar { display:none; } .no-print-tip { display:none; }
+    details { border:none; background:none; }
+    details:not([open]) summary { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== 上半部：复习导读（聚焦 2026 新命题方向 + 关键速查） ========== -->
+<header>
+  <h1>数学 · 七年级下册 · 期末复习导读（新命题方向版）</h1>
+  <div class="meta">北师大版 · 小雨 · 2026-06-18 · 全六章</div>
+</header>
+
+<div class="tip no-print-tip">📌 用法：先读这页"新方向怎么考、怎么练" → 合书默记关键公式 → 再做下半部自测卷（不计分，解答题一定写过程）。</div>
+
+<h2>一、2026 这样考，你这样准备</h2>
+<table>
+  <tr><th>新方向</th><th>题里长什么样</th><th>你该怎么应对</th></tr>
+  <tr><td><strong>① 减记忆、增高阶</strong></td><td>不直接问"是什么"，问"对不对/为什么/比一比"（判断辨析题）</td><td>每个公式都想一遍"为什么成立"，看到等式先验证别急着选</td></tr>
+  <tr><td><strong>② 长情境先提取</strong></td><td>一段生活材料（坐公交、超市满减、泉水），先读懂再算</td><td>先圈出"谁在变、谁跟着变、关键数字"，再列式</td></tr>
+  <tr><td><strong>③ 跨学科 + 动态几何</strong></td><td>折叠、旋转、动点；几何里套变量关系</td><td>折叠=对应边角相等(折痕是对称轴)；旋转=对应边角与旋转角相等</td></tr>
+  <tr><td><strong>④ 重过程规范</strong></td><td>解答题按步给分，过程不全要扣分</td><td>证明写"三段式"，计算先写公式再代入再化简，不跳步</td></tr>
+</table>
+<div class="warn">⚠️ 名校就在"过程分"上拉开差距：会做 ≠ 能拿满分，写清每一步才稳。</div>
+
+<h2>二、关键公式 / 性质速查（合书默记）</h2>
+<table>
+  <tr><th>主题</th><th>要点</th></tr>
+  <tr><td>幂运算</td><td>同底乘<strong>指数相加</strong> a<sup>m</sup>·a<sup>n</sup>=a<sup>m+n</sup>；幂的乘方<strong>指数相乘</strong> (a<sup>m</sup>)<sup>n</sup>=a<sup>mn</sup>；积的乘方各自乘方 (ab)<sup>n</sup>=a<sup>n</sup>b<sup>n</sup>；同底除<strong>指数相减</strong>；a<sup>0</sup>=1(a≠0)，a<sup>−n</sup>=1/a<sup>n</sup></td></tr>
+  <tr><td>乘法公式</td><td>平方差 (a+b)(a−b)=a<sup>2</sup>−b<sup>2</sup>；完全平方 (a±b)<sup>2</sup>=a<sup>2</sup>±2ab+b<sup>2</sup>（中间<strong>必有 2ab</strong>）</td></tr>
+  <tr><td>平行线</td><td>判定：角相等/互补 ⇒ 平行；性质：平行 ⇒ 角相等/互补。同旁内角是<strong>互补</strong></td></tr>
+  <tr><td>三角形</td><td>两边之和 &gt; 第三边；内角和 180°；外角=不相邻两内角之和；全等 SSS/SAS/ASA/AAS/HL（SSA、AAA 不行）</td></tr>
+  <tr><td>折叠/旋转</td><td>折叠：折痕两侧<strong>对应边、对应角相等</strong>（折痕是对称轴）；旋转：对应边、对应角相等，<strong>旋转角=任一对应点与中心连线的夹角</strong></td></tr>
+  <tr><td>变量关系</td><td>因变量写左边；读图先认<strong>横轴(自变量)、纵轴(因变量)</strong>；水平段=因变量不变；速度=路程增量÷时间增量</td></tr>
+  <tr><td>概率</td><td>P=有利结果数÷所有等可能结果数=m/n；结果要不重不漏；所有结果概率之和=1</td></tr>
+</table>
+
+<h2>三、期末猜题（高频考点预测，非真题）</h2>
+<div class="warn">⚠️ 以下是结合知识库易错点与 2026 命题趋势的<strong>考点预测，不是真题</strong>，只帮你把复习重点压到最可能考处。</div>
+<table>
+  <tr><th>#</th><th>预测考点</th><th>可能题型（呼应新方向）</th></tr>
+  <tr><td>1</td><td>幂运算 / 乘法公式 的"判断对错"辨析</td><td>高阶选择（①）</td></tr>
+  <tr><td>2</td><td>超市满减 / 公交计费 的列式与求值</td><td>长情境应用（②）</td></tr>
+  <tr><td>3</td><td>长方形折叠求角度、长度</td><td>动态几何填空/解答（③）</td></tr>
+  <tr><td>4</td><td>旋转型全等（"手拉手"模型）证明</td><td>★几何证明，重过程（③④）</td></tr>
+  <tr><td>5</td><td>BRT 公交 s-t 图象读图求速度</td><td>读图应用（②）</td></tr>
+  <tr><td>6</td><td>动点 + 三角形面积随时间变化</td><td>★压轴跨模块递进（③）</td></tr>
+</table>
+
+<!-- ========== 下半部：自测卷（必有） ========== -->
+<div class="pagebreak">
+<header>
+  <h1>数学 · 七年级下册 · 期末自测卷（新命题方向版 · 模拟）</h1>
+  <div class="meta">
+    <span>姓名：<span class="fill">小雨</span></span>
+    <span>日期：2026-06-18</span>
+    <span>测试类型：期末·全册模拟</span>
+    <span>用时：<span class="fill"></span>分钟</span>
+    <span>建议限时：75分钟</span>
+    <span>难度配比：基础:中档:压轴 ≈ 6:3:1（15:8:2）</span>
+  </div>
+</header>
+<div class="tip">不计分，是学习工具。先独立做完（解答题<strong>一定写过程</strong>），再点"显示全部答案"对照。这套卷子刻意多了辨析题、长情境题、折叠/旋转/动点题——遇到读不懂的先圈关键信息，别慌。</div>
+<div class="toolbar">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">显示全部答案</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">隐藏全部答案</button>
+</div>
+
+<div class="section">一、选择题（每题 3 分，共 30 分）</div>
+
+<div class="q">1. 下列计算<strong>正确</strong>的是 <span class="kp">[考点：幂的运算·辨析]</span>
+  <div class="options"><div>A. a<sup>2</sup>·a<sup>3</sup>=a<sup>6</sup></div><div>B. (a<sup>2</sup>)<sup>3</sup>=a<sup>5</sup></div><div>C. a<sup>6</sup>÷a<sup>2</sup>=a<sup>4</sup></div><div>D. (2a)<sup>2</sup>=2a<sup>2</sup></div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">逐项判断：A 同底数幂乘法指数<strong>相加</strong>，应为 a<sup>5</sup>，错；B 幂的乘方指数<strong>相乘</strong>，应为 a<sup>6</sup>，错；C 同底数幂除法指数相减，a<sup>6−2</sup>=a<sup>4</sup>，对；D 积的乘方系数也要平方，应为 4a<sup>2</sup>，错。这种"找正确项"的辨析题要四个都验一遍。</div></details>
+</div>
+
+<div class="q">2. 下列等式<strong>成立</strong>的是 <span class="kp">[考点：乘法公式·辨析]</span>
+  <div class="options"><div>A. (a+b)<sup>2</sup>=a<sup>2</sup>+b<sup>2</sup></div><div>B. (a−b)<sup>2</sup>=a<sup>2</sup>−b<sup>2</sup></div><div>C. (a+3)(a−3)=a<sup>2</sup>−9</div><div>D. (−a+2)(−a−2)=a<sup>2</sup>+4</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">A 漏了中间项 2ab，错；B 把完全平方当成平方差，错（应 a<sup>2</sup>−2ab+b<sup>2</sup>）；C 平方差 (a+3)(a−3)=a<sup>2</sup>−3<sup>2</sup>=a<sup>2</sup>−9，对；D 看成平方差 (−a)<sup>2</sup>−2<sup>2</sup>=a<sup>2</sup>−4，故 D 错。</div></details>
+</div>
+
+<div class="q">3. 已知三角形的两边长分别为 4 和 9，则第三边的长可能是 <span class="kp">[考点：三角形三边关系]</span>
+  <div class="options"><div>A. 4</div><div>B. 5</div><div>C. 9</div><div>D. 14</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">第三边 x 满足 9−4 &lt; x &lt; 9+4，即 5 &lt; x &lt; 13。A=4、B=5（不能等于5）、D=14 都在范围外，只有 C=9 满足。</div></details>
+</div>
+
+<div class="q">4. 下列说法<strong>正确</strong>的是 <span class="kp">[考点：平行线判定与性质·辨析]</span>
+  <div class="options"><div>A. 两直线平行，同旁内角相等</div><div>B. 同位角相等，两直线平行</div><div>C. 内错角互补，两直线平行</div><div>D. 对顶角互补</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">A 错：两直线平行时同旁内角<strong>互补</strong>不是相等；B 对：同位角相等是平行的判定；C 错：判定要内错角<strong>相等</strong>不是互补；D 错：对顶角<strong>相等</strong>。判定/性质方向相反，"同旁内角"永远配"互补"。</div></details>
+</div>
+
+<div class="q">5. 下列图形中，一定是<strong>轴对称图形</strong>的是 <span class="kp">[考点：轴对称图形]</span>
+  <div class="options"><div>A. 平行四边形</div><div>B. 等腰三角形</div><div>C. 不等边三角形</div><div>D. 任意梯形</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">等腰三角形沿底边上的高对折两边重合，是轴对称图形（1 条对称轴）。一般平行四边形、不等边三角形、任意梯形都不是。</div></details>
+</div>
+
+<div class="q">6. 把写有数字 1、2、3、4、5、6、7、8、9 的九张卡片洗匀，随机抽一张，抽到的数是 3 的倍数的概率是 <span class="kp">[考点：等可能事件概率]</span>
+  <div class="options"><div>A. 1/9</div><div>B. 2/9</div><div>C. 1/3</div><div>D. 1/2</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">共 9 种等可能结果，3 的倍数有 3、6、9 共 3 个，P=3/9=1/3。</div></details>
+</div>
+
+<div class="q">7. 将 △ABC 绕点 A 按逆时针方向旋转 50°，得到 △AB′C′，下列说法<strong>错误</strong>的是 <span class="kp">[考点：旋转的性质]</span>
+  <div class="options"><div>A. AB=AB′</div><div>B. ∠BAB′=50°</div><div>C. BC=B′C′</div><div>D. ∠BAC=50°</div></div>
+  <details><summary>答案与解析</summary><div class="ans">D</div><div class="sol">旋转中对应线段相等（A、C 对）；旋转角是<strong>对应点与旋转中心连线的夹角</strong>，即 ∠BAB′=∠CAC′=50°（B 对）。而 ∠BAC 是三角形本身的内角，与旋转角无关，不一定等于 50°，故 D 是错误说法。</div></details>
+</div>
+
+<div class="q">8. 一根弹簧原长 10 cm，在弹性范围内每挂 1 kg 重物伸长 0.5 cm。挂 x kg 时弹簧长 y cm，则 y 与 x 的关系式是 <span class="kp">[考点：变量·列关系式]</span>
+  <div class="options"><div>A. y=10x</div><div>B. y=0.5x</div><div>C. y=10+0.5x</div><div>D. y=0.5+10x</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">弹簧长=原长+伸长量。伸长量=每千克伸长×千克数=0.5x，故 y=10+0.5x。原长 10 是不变的常数，0.5x 才是随 x 变化的部分。</div></details>
+</div>
+
+<div class="q">9. 同时掷两枚均匀的硬币，两枚<strong>都正面</strong>朝上的概率是 <span class="kp">[考点：概率·列举法]</span>
+  <div class="options"><div>A. 1/2</div><div>B. 1/3</div><div>C. 1/4</div><div>D. 3/4</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">两枚硬币的所有等可能结果：(正,正)、(正,反)、(反,正)、(反,反)共 4 种，其中"都正"只有 1 种，P=1/4。注意 (正,反) 与 (反,正) 是两种不同结果，别漏。</div></details>
+</div>
+
+<div class="q">10. 若 x<sup>2</sup>+mx+9 是一个完全平方式，则 m 的值是 <span class="kp">[考点：完全平方公式·逆用]</span>
+  <div class="options"><div>A. 3</div><div>B. 6</div><div>C. ±6</div><div>D. ±3</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">完全平方式形如 (x±3)<sup>2</sup>=x<sup>2</sup>±6x+9，对比中间项 mx=±6x，所以 m=±6。容易漏掉负的一种情况。</div></details>
+</div>
+
+<div class="section">二、填空题（每空 3 分，共 30 分）</div>
+
+<div class="q">11. 计算：(−3)<sup>0</sup> = ______；2<sup>−3</sup> = ______。 <span class="kp">[考点：零指数/负整数指数幂]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">1；1/8</div><div class="sol">非零数的零次幂为 1，所以 (−3)<sup>0</sup>=1；负整数指数幂变倒数：2<sup>−3</sup>=1/2<sup>3</sup>=1/8。</div></details>
+</div>
+
+<div class="q">12. 用简便方法（乘法公式）计算：102×98 = ______。 <span class="kp">[考点：平方差公式·简算]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">9996</div><div class="sol">凑成"和×差"：102×98=(100+2)(100−2)=100<sup>2</sup>−2<sup>2</sup>=10000−4=9996。这是平方差公式的逆向应用，比直接乘快。</div></details>
+</div>
+
+<div class="q">13. 已知 a+b=4，ab=3，则 a<sup>2</sup>+b<sup>2</sup> = ______。 <span class="kp">[考点：完全平方·整体代入]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">10</div><div class="sol">由 (a+b)<sup>2</sup>=a<sup>2</sup>+2ab+b<sup>2</sup> 得 a<sup>2</sup>+b<sup>2</sup>=(a+b)<sup>2</sup>−2ab=4<sup>2</sup>−2×3=16−6=10。不必求出 a、b，整体代入即可。</div></details>
+</div>
+
+<div class="q">14. 如图（文字描述）：AB∥CD，点 P 在 AB 与 CD 之间，连 PA、PC 形成一条折线。已知在 AB 处 ∠BAP=40°，在 CD 处 ∠DCP=30°（∠BAP、∠DCP 分别是 PA、PC 与各自直线的夹角，且都在折点 P 的同侧），则 ∠APC = ______。 <span class="kp">[考点：平行线性质·加辅助线]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">70°</div><div class="sol">过 P 作直线 EF∥AB，则 EF 也∥CD。由两直线平行内错角相等：∠APE=∠BAP=40°，∠CPE=∠DCP=30°。所以 ∠APC=∠APE+∠CPE=40°+30°=70°。<strong>方法</strong>：折点处"过点作平行线"是平行线求角的万能招。</div></details>
+</div>
+
+<div class="q">15. 等腰三角形的一个内角是 80°，则它的顶角是 ______。 <span class="kp">[考点：等腰三角形·分类讨论]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">80° 或 20°</div><div class="sol">分两种情况：① 若 80° 是顶角，顶角就是 80°；② 若 80° 是底角，两底角共 160°，顶角=180°−160°=20°。两种都成立，<strong>别漏分类</strong>。</div></details>
+</div>
+
+<div class="q">16. 将长方形纸片 ABCD 折叠，使顶点 B 落在边 AD 上的点 B′处，折痕为 AE（E 在 BC 上）。若 ∠BAE=30°，则折叠后 ∠B′AE = ______，∠B′AD = ______。 <span class="kp">[考点：折叠·对应角相等]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">30°；30°</div><div class="sol">折叠中折痕两侧对应角相等，所以 ∠B′AE=∠BAE=30°。长方形 ∠BAD=90°，而 ∠BAD=∠BAE+∠B′AE+∠B′AD=30°+30°+∠B′AD，所以 ∠B′AD=90°−60°=30°。<strong>关键</strong>：折叠就是把"对应角相等"当隐藏条件用。</div></details>
+</div>
+
+<div class="q">17. 一个不透明袋中有红球 2 个、黄球 3 个，另有若干个蓝球，所有球除颜色外都相同。搅匀后任意摸一个，摸到蓝球的概率是 1/2，则蓝球有 ______ 个。 <span class="kp">[考点：概率·逆向求数量]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">5</div><div class="sol">设蓝球 b 个，总数为 2+3+b=5+b。P(蓝)=b/(5+b)=1/2，交叉相乘 2b=5+b，解得 b=5。验证：蓝 5 个、总 10 个，5/10=1/2，符合。</div></details>
+</div>
+
+<div class="section">三、计算与化简题（每题 8 分，共 24 分，要写过程）</div>
+
+<div class="q">18. 先化简，再求值：(2x+1)(2x−1) − (x−2)<sup>2</sup>，其中 x = −1。 <span class="kp">[考点：乘法公式·化简求值·过程规范]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">化简得 3x<sup>2</sup>+4x−5；当 x=−1 时，值为 −6。</div>
+  <div class="sol">第一步（用公式展开）：(2x+1)(2x−1)=(2x)<sup>2</sup>−1<sup>2</sup>=4x<sup>2</sup>−1；(x−2)<sup>2</sup>=x<sup>2</sup>−4x+4。<br>第二步（去括号，减号要变号）：原式=4x<sup>2</sup>−1−(x<sup>2</sup>−4x+4)=4x<sup>2</sup>−1−x<sup>2</sup>+4x−4。<br>第三步（合并同类项）：=3x<sup>2</sup>+4x−5。<br>第四步（代入求值）：x=−1 时，3×(−1)<sup>2</sup>+4×(−1)−5=3−4−5=−6。</div></details>
+</div>
+
+<div class="q">19. 计算：(−2a<sup>2</sup>b)<sup>3</sup> ÷ (4a<sup>3</sup>b)。 <span class="kp">[考点：积的乘方·整式除法·过程规范]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">−2a<sup>3</sup>b<sup>2</sup></div>
+  <div class="sol">第一步（先算积的乘方，每个因式各自乘方）：(−2a<sup>2</sup>b)<sup>3</sup>=(−2)<sup>3</sup>·(a<sup>2</sup>)<sup>3</sup>·b<sup>3</sup>=−8a<sup>6</sup>b<sup>3</sup>。<br>第二步（再做除法，系数相除、同字母指数相减）：−8a<sup>6</sup>b<sup>3</sup>÷(4a<sup>3</sup>b)=(−8÷4)·a<sup>6−3</sup>·b<sup>3−1</sup>=−2a<sup>3</sup>b<sup>2</sup>。<br>注意 (−2)<sup>3</sup>=−8，符号别丢。</div></details>
+</div>
+
+<div class="q">20. 化简：(a+2b)(a−2b) + (a+2b)<sup>2</sup>。 <span class="kp">[考点：平方差+完全平方·过程规范]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">2a<sup>2</sup>+4ab</div>
+  <div class="sol">第一步（分别套公式）：(a+2b)(a−2b)=a<sup>2</sup>−(2b)<sup>2</sup>=a<sup>2</sup>−4b<sup>2</sup>；(a+2b)<sup>2</sup>=a<sup>2</sup>+2·a·2b+(2b)<sup>2</sup>=a<sup>2</sup>+4ab+4b<sup>2</sup>。<br>第二步（相加合并）：(a<sup>2</sup>−4b<sup>2</sup>)+(a<sup>2</sup>+4ab+4b<sup>2</sup>)=2a<sup>2</sup>+4ab。−4b<sup>2</sup> 与 +4b<sup>2</sup> 正好抵消。</div></details>
+</div>
+
+<div class="section">四、几何证明与动态几何（共 22 分，要写过程）</div>
+
+<div class="q">21.（10 分）如图（文字描述）：△ABC 与 △ADE 共顶点 A，从 A 出发的四条射线按 AB、AD、AC、AE 的顺序排列。已知 AB=AC，AD=AE，且 ∠BAC=∠DAE。求证：BD=CE。 <span class="kp">[考点：旋转型全等·SAS·过程规范]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">证 △ABD≌△ACE（SAS），得 BD=CE。</div>
+  <div class="sol">证明：∵∠BAC=∠DAE，<br>两边都减去公共角 ∠DAC，<br>　∠BAC−∠DAC=∠DAE−∠DAC，即 ∠BAD=∠CAE。<br>在 △ABD 和 △ACE 中，<br>　AB=AC（已知），<br>　∠BAD=∠CAE（上面已证），<br>　AD=AE（已知），<br>∴ △ABD≌△ACE（SAS）。<br>∴ BD=CE（全等三角形对应边相等）。<br><strong>这是"手拉手/旋转型"模型</strong>：把 △ABD 绕 A 旋转就到 △ACE，旋转的本质就是全等。关键步是用"等式两边减公共角"凑出夹角相等。</div></details>
+</div>
+
+<div class="q">22.（12 分，压轴）将一张上下两边平行的长方形纸条 ABCD 沿直线 EF 折叠（E 在上边 AD 上，F 在下边 BC 上），折叠后纸条左半部分翻到右侧，点 A 落到 A′。已知折叠后 ∠DEF=110°。 <span class="kp">[考点：折叠+平行线+角的计算·递进设问]</span>
+  <p>（1）求折叠前 ∠AEF 的度数；（2）由折叠求 ∠A′EF 的度数；（3）求 ∠A′ED 的度数。</p>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">（1）∠AEF=70°；（2）∠A′EF=70°；（3）∠A′ED=40°。</div>
+  <div class="sol">（1）A、E、D 在同一条上边上，∠AED 是平角 180°。∠AEF 与 ∠DEF 互补，∠AEF=180°−∠DEF=180°−110°=70°。<br>（2）折叠中折痕 EF 两侧对应角相等，A′E 是 AE 折过去的，所以 ∠A′EF=∠AEF=70°。<br>（3）A′E 折到了 D 这一侧，∠A′ED=∠DEF−∠A′EF=110°−70°=40°。<br><strong>提醒</strong>：折叠题先标出"哪个角是折过去的对应角"，对应角相等是解题钥匙。</div></details>
+</div>
+
+<div class="section">五、长情境建模与应用题（共 24 分，要写过程）</div>
+
+<div class="q">23.（8 分）某超市"618"促销规则：一次购物<strong>每满 100 元立减 20 元</strong>（例如应付 250 元，含 2 个整百，减 40 元，实付 210 元）。设顾客一次购物的应付金额为 x 元（100≤x&lt;300），实付金额为 y 元。 <span class="kp">[考点：消费情境·分段列式·分类讨论]</span>
+  <p>（1）当 100≤x&lt;200 时，写出 y 与 x 的关系式；（2）当 200≤x&lt;300 时，写出 y 与 x 的关系式；（3）若某顾客实付了 165 元，他的应付金额 x 可能是多少？</p>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">（1）y=x−20；（2）y=x−40；（3）x=185 元 或 x=205 元。</div>
+  <div class="sol">（1）100≤x&lt;200 时只满 1 个整百，减 20 元：y=x−20。<br>（2）200≤x&lt;300 时满 2 个整百，减 40 元：y=x−40。<br>（3）分两种情况解：<br>　① 若落在第一段：x−20=165，x=185，满足 100≤185&lt;200，成立（满 1 个百减 20，实付 165）。<br>　② 若落在第二段：x−40=165，x=205，满足 200≤205&lt;300，成立（满 2 个百减 40，实付 165）。<br>所以应付金额可能是 185 元或 205 元。<strong>提醒</strong>：分段函数的实际题，要把每一段都验一遍范围。</div></details>
+</div>
+
+<div class="q">24.（8 分）济南 BRT 快速公交某趟车从甲站匀速开往乙站，中途在一个站点停靠上下客。下面用文字给出它离开甲站的路程 s（千米）随时间 t（分钟）变化的分段图象信息：<br>
+  · O→A 段：t 从 0 到 6 分钟，s 从 0 升到 3 千米（行驶）；<br>
+  · A→B 段：t 从 6 到 8 分钟，s 保持 3 千米不变；<br>
+  · B→C 段：t 从 8 到 16 分钟，s 从 3 升到 9 千米（行驶到乙站）。 <span class="kp">[考点：交通情境·读 s-t 图·求速度]</span>
+  <p>（1）这段变化关系中，自变量、因变量各是什么？（2）公交在中途站停靠了几分钟？（3）O→A 段的速度是多少千米/分？（4）B→C 段的速度是多少千米/分？哪一段开得更快？</p>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">（1）自变量 t（时间），因变量 s（路程）；（2）停 2 分钟；（3）0.5 千米/分；（4）0.75 千米/分，B→C 段更快。</div>
+  <div class="sol">（1）时间 t 主动变化是自变量，路程 s 跟着变是因变量。<br>（2）A→B 段 s 不变（车没动）表示停靠：从 6 到 8 分钟，停 8−6=2 分钟。<br>（3）速度=路程增量÷时间增量=(3−0)÷(6−0)=0.5 千米/分。<br>（4）B→C 段速度=(9−3)÷(16−8)=6÷8=0.75 千米/分。0.75&gt;0.5，所以 B→C 段更快。<br><strong>提醒</strong>：读图先认准横轴、纵轴各代表谁，水平段=路程不变=停车。</div></details>
+</div>
+
+<div class="q">25.（8 分，压轴）如图（文字描述）：长方形 ABCD 中，AB=8 cm，BC=6 cm（∠B=90°，AB⊥BC）。点 P 从顶点 B 出发，沿 B→C 方向以每秒 2 cm 的速度匀速运动，到达 C 时停止。设运动时间为 t 秒。 <span class="kp">[考点：动点+三角形面积+变量关系·跨模块递进]</span>
+  <p>（1）t 的取值范围是什么？用 t 表示线段 BP 的长；（2）求 △ABP 的面积 S（cm<sup>2</sup>）与 t 的关系式；（3）当 t 为何值时，S=24 cm<sup>2</sup>？（4）在整个运动过程中，△ABP 的面积能否达到 30 cm<sup>2</sup>？请说明理由。</p>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">（1）0≤t≤3，BP=2t；（2）S=8t；（3）t=3 秒；（4）不能，理由见解析。</div>
+  <div class="sol">（1）P 走完 BC=6 cm 需 6÷2=3 秒，故 0≤t≤3；BP=速度×时间=2t（cm）。<br>（2）△ABP 中，∠B=90°，AB 和 BP 是两条直角边，AB=8 为高、BP=2t 为底：S=½×BP×AB=½×2t×8=8t。<br>（3）令 8t=24，解得 t=3。此时 BP=6=BC，P 恰好到 C，符合 0≤t≤3，成立。<br>（4）令 8t=30，解得 t=3.75 秒&gt;3，此时 P 早已越过 C 点，不在运动范围内。t 最大为 3，对应 S 最大=8×3=24 cm<sup>2</sup>。所以面积<strong>不能</strong>达到 30 cm<sup>2</sup>。<br><strong>提醒</strong>：动点题第（4）问一定要回到"t 的取值范围"判断，超范围就达不到。</div></details>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--
+  英语七下·期末·2026新命题方向版自测卷（自包含·可打印·答案可折叠）
+  对标 2026 济南中考新政命题方向：减记忆增高阶 / 长情境先提取 / 读写结合信息整合 / 重写作过程规范。
+  骨架复用 templates/试卷模板.html；公式无（英语）；每题带 [考点：…]；卷头 meta 完整。
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英语 · 七年级下册 · 期末（新命题方向版）</title>
+<style>
+  :root { --ink:#1f2937; --line:#d1d5db; --soft:#6b7280; --brand:#2563eb; --warn:#b45309; --ok:#047857; }
+  * { box-sizing: border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+         color:var(--ink); max-width:860px; margin:24px auto; padding:0 20px; line-height:1.85; font-size:15px; }
+  header { border-bottom:2px solid var(--ink); padding-bottom:12px; margin-bottom:8px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  h2 { font-size:18px; color:var(--brand); margin:28px 0 10px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  h3 { font-size:16px; margin:18px 0 8px; }
+  .meta { color:var(--soft); font-size:14px; }
+  .tip  { background:#eff6ff; border-left:4px solid var(--brand); padding:8px 12px; font-size:14px; color:#1e40af; margin:14px 0; border-radius:4px; }
+  .warn { background:#fffbeb; border-left:4px solid var(--warn);  padding:8px 12px; font-size:14px; color:#92400e; margin:14px 0; border-radius:4px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 16px; font-size:14px; }
+  th,td { border:1px solid var(--line); padding:6px 10px; text-align:left; vertical-align:top; }
+  th { background:#f3f4f6; font-weight:600; }
+  ul { margin:6px 0; padding-left:22px; } li { margin:3px 0; }
+  .section { font-weight:700; font-size:17px; margin:22px 0 10px; color:var(--brand); }
+  .passage { background:#f9fafb; border:1px solid var(--line); border-radius:6px; padding:10px 14px; margin:10px 0; }
+  .q { margin:16px 0; }
+  .kp { font-size:12px; color:var(--soft); }
+  .options div { margin:3px 0 3px 16px; }
+  .fill { border-bottom:1px solid var(--ink); display:inline-block; min-width:100px; }
+  .answerline { border-bottom:1px solid var(--line); height:28px; margin-top:8px; }
+  details { margin-top:8px; background:#f9fafb; border:1px solid var(--line); border-radius:6px; padding:6px 12px; }
+  summary { cursor:pointer; color:var(--brand); font-size:14px; font-weight:600; }
+  .ans { color:var(--ok); font-weight:600; }
+  .sol { font-size:14px; margin-top:4px; }
+  .toolbar { text-align:right; margin:10px 0; position:sticky; top:0; background:#fff; padding:8px 0; z-index:10; }
+  button { background:var(--brand); color:#fff; border:0; padding:6px 14px; border-radius:6px; cursor:pointer; font-size:14px; margin-left:6px; }
+  .pagebreak { page-break-before:always; margin-top:40px; padding-top:20px; border-top:3px double var(--ink); }
+  @media print {
+    .toolbar { display:none; } .no-print-tip { display:none; }
+    details { border:none; background:none; }
+    details:not([open]) summary { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== 上半部：考前策略（按 2026 新命题方向） ========== -->
+<header>
+  <h1>英语 · 七年级下册 · 期末考前策略（2026 新命题方向）</h1>
+  <div class="meta">人教版2024 · 小雨 · 2026-06-18 · Unit 1-8</div>
+</header>
+<div class="tip no-print-tip">📌 用法：先读这页"怎么读、怎么写"的方法 → 合书复述三步法 → 再做下半部自测卷（不计分）。这套卷子重点不是"认语法"，而是"读懂语篇、提取信息、写好短文"。</div>
+
+<h2>一、长情境先提取 · 信息提取三步法（对接阅读/对话/完形）</h2>
+<table>
+  <tr><th>步骤</th><th>做什么</th><th>给自己的口令</th></tr>
+  <tr><td>① 先看问题</td><td>先读题目问什么，带着问题去读材料</td><td>"题目要我找什么？"</td></tr>
+  <tr><td>② 回原文画词</td><td>在材料里圈出对应的关键词/数字/时间</td><td>"答案那句话在哪？圈出来"</td></tr>
+  <tr><td>③ 比对排除</td><td>选项和原文比对，排除张冠李戴</td><td>"原文真这么说吗？"</td></tr>
+</table>
+<div class="warn">⚠️ 转折词最爱设陷阱：读到 <strong>but / however / although</strong> 要警觉——答案常在转折之后。</div>
+
+<h2>二、读写结合 · 完形顺逻辑（不要只看一个空）</h2>
+<ul>
+  <li>先把全文<strong>读一遍懂大意</strong>（讲谁、什么时候、发生了什么），再回头填空。</li>
+  <li>顺着<strong>时间线 / 因果 / 转折</strong>选词：先定时态（标志词 now / Look! → 进行时；last / yesterday → 过去时；often / every day → 一般现在时），再看逻辑关系。</li>
+</ul>
+
+<h2>三、重过程规范 · 写作四步（书面表达提分关键）</h2>
+<table>
+  <tr><th>步骤</th><th>怎么做</th></tr>
+  <tr><td>① 审题</td><td>圈出<strong>要点、人称、时态</strong>（介绍习惯→一般现在时；记上周末→一般过去时）</td></tr>
+  <tr><td>② 列点</td><td>把每个要点列成短语，<strong>对着要点检查不漏点</strong></td></tr>
+  <tr><td>③ 连句成段</td><td>用衔接词把句子串起来：<strong>First / Second / Also / but / because / finally</strong>，别一句一句蹦</td></tr>
+  <tr><td>④ 检查</td><td>时态一致、三单 -s、首字母大写、标点</td></tr>
+</table>
+<div class="tip">🧠 评分标准记牢：<strong>要点全 + 句子连贯 + 时态人称对 + 卷面干净</strong> &gt; 辞藻华丽。</div>
+
+<!-- ========== 下半部：自测卷 ========== -->
+<div class="pagebreak">
+<header>
+  <h1>英语 · 七年级下册 · 期末自测卷（新命题方向版）</h1>
+  <div class="meta">
+    <span>科目：英语</span>
+    <span>范围：七下期末全册 Unit 1-8</span>
+    <span>日期：2026-06-18</span>
+    <span>类型：期末自测</span>
+    <span>建议限时：60分钟</span>
+    <span>难度配比：基础:中档:压轴 ≈ 6:3:1（20:10:3）</span>
+  </div>
+  <div class="meta" style="margin-top:6px;">
+    <span>姓名：<span class="fill">小雨</span></span>
+    <span>用时：<span class="fill"></span>分钟</span>
+  </div>
+</header>
+<div class="tip">不计分，是学习工具。先独立做完（阅读/完形先读懂再答，作文按四步走），再点"显示全部答案"对照。本卷弱化纯语法辨识，强调<strong>语篇情境 + 信息提取 + 读写结合 + 写作过程</strong>。</div>
+<div class="toolbar">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">显示全部答案</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">隐藏全部答案</button>
+</div>
+
+<!-- ——— 一、情境对话·信息提取（听力转读句） ——— -->
+<div class="section">一、情境对话 · 信息提取（读对话选答案，每题2分，共10分）</div>
+<div class="tip no-print-tip">先读懂对话在说什么，再到对话里找答案那一句。</div>
+
+<div class="q">1. A: Lily, what are you doing? You look busy.<br>
+  B: I'm feeding my rabbit. It eats carrots every morning, but it's eating an apple now.<br>
+  <strong>Q: What is Lily's rabbit eating now?</strong> <span class="kp">[考点：现在进行时·信息提取·基础]</span>
+  <div class="options"><div>A. Carrots</div><div>B. An apple</div><div>C. Grass</div><div>D. Bread</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">题目问"现在(now)在吃什么"。对话里 every morning 吃胡萝卜是习惯，but…now 之后才是此刻：is eating an apple。看到 but/now 要定位到转折后的信息。</div></details>
+</div>
+
+<div class="q">2. A: Mum, can I play computer games now?<br>
+  B: No. You have to finish your homework first. After that you can play for half an hour.<br>
+  <strong>Q: When can the boy play computer games?</strong> <span class="kp">[考点：have to·情境理解·基础]</span>
+  <div class="options"><div>A. Right now</div><div>B. After he finishes his homework</div><div>C. Never</div><div>D. For two hours</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">妈妈说先(first)写完作业、之后(After that)才能玩。have to finish…first 是关键句，答案不是"现在"。</div></details>
+</div>
+
+<div class="q">3. 天气广播：<em>"Good morning! It's cloudy in Jinan now, and it's going to rain in the afternoon. Take an umbrella when you go out."</em><br>
+  <strong>Q: What should you take when you go out today?</strong> <span class="kp">[考点：天气语篇·信息提取·基础]</span>
+  <div class="options"><div>A. Sunglasses</div><div>B. An umbrella</div><div>C. A coat</div><div>D. A hat</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">广播最后一句直接说 Take an umbrella。下午要下雨(rain)，所以带伞。回原文定位最后一句即可。</div></details>
+</div>
+
+<div class="q">4. A: Whose schoolbag is this on the floor?<br>
+  B: Oh, it's mine! Sorry, I'll put it away.<br>
+  <strong>Q: Who does the schoolbag belong to?</strong> <span class="kp">[考点：物主代词·信息提取·基础]</span>
+  <div class="options"><div>A. The first speaker</div><div>B. The second speaker</div><div>C. The teacher</div><div>D. Nobody</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">第二个人说 it's mine（=my schoolbag），所以书包是"第二个说话人"的。mine 是名词性物主代词。</div></details>
+</div>
+
+<div class="q">5. A: Would you like some noodles or rice?<br>
+  B: Rice, please. And a glass of orange juice.<br>
+  <strong>Q: What does B want to drink?</strong> <span class="kp">[考点：选择疑问句·点餐语篇·基础]</span>
+  <div class="options"><div>A. Tea</div><div>B. Water</div><div>C. Orange juice</div><div>D. Milk</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">题目问"喝(drink)什么"，rice 是吃的，要找"a glass of orange juice"。别被 rice 干扰，紧扣问题里的 drink。</div></details>
+</div>
+
+<!-- ——— 二、单项选择（语境中辨析） ——— -->
+<div class="section">二、单项选择（在语境中辨析，每题2分，共16分）</div>
+
+<div class="q">6. My little brother is only three, so he ___ go to school. He stays at home with Grandma. <span class="kp">[考点：don't have to·语境·基础]</span>
+  <div class="options"><div>A. has to</div><div>B. doesn't have to</div><div>C. mustn't</div><div>D. must</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">三岁不用(不必)上学＝doesn't have to（不必）；mustn't 是"禁止上学"，不合语境。读懂后半句 stays at home 才能判断。</div></details>
+</div>
+
+<div class="q">7. — The library is so quiet. — Yes, we ___ talk loudly here; it's the rule. <span class="kp">[考点：mustn't 禁止·语境·基础]</span>
+  <div class="options"><div>A. don't have to</div><div>B. mustn't</div><div>C. needn't</div><div>D. can</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">图书馆规定"禁止"大声讲话＝mustn't；don't have to/needn't 是"不必"，意思不对。</div></details>
+</div>
+
+<div class="q">8. Tom wants to keep fit, so he ___ goes to bed late. He sleeps early every day. <span class="kp">[考点：频度副词词义·语境·中档]</span>
+  <div class="options"><div>A. always</div><div>B. usually</div><div>C. never</div><div>D. often</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">后一句 He sleeps early every day 说明他"从不(never)"晚睡。要靠下一句推出频度副词，不是单看一个空。</div></details>
+</div>
+
+<div class="q">9. Look at the photo! In it, the children ___ on the beach while their parents ___ lunch. <span class="kp">[考点：现在进行时·看图描述·基础]</span>
+  <div class="options"><div>A. play; cook</div><div>B. are playing; are cooking</div><div>C. played; cooked</div><div>D. play; are cooking</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">Look at the photo! 描述照片里正在发生的动作，两处都用现在进行时 are + v-ing。</div></details>
+</div>
+
+<div class="q">10. My grandpa often ___ stories about his childhood, but today he ___ too tired to talk. <span class="kp">[考点：一般现在时 vs 系动词·语境·中档]</span>
+  <div class="options"><div>A. tells; is</div><div>B. is telling; is</div><div>C. tells; was</div><div>D. told; is</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">often→习惯，一般现在时 tells（三单）；but today…是现在的状态，用 is。转折词 but 提示前后情况相反。</div></details>
+</div>
+
+<div class="q">11. — How was your weekend? — Great! I ___ my grandparents and we ___ a big dinner together. <span class="kp">[考点：一般过去时·不规则·语境·基础]</span>
+  <div class="options"><div>A. visit; have</div><div>B. visited; had</div><div>C. visit; had</div><div>D. visited; have</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">How was（过去）问周末，全程用过去时：visited（规则）、had（have 的不规则过去式）。</div></details>
+</div>
+
+<div class="q">12. There isn't ___ milk in the fridge. Could you buy ___ for me? <span class="kp">[考点：some/any·不可数·语境·中档]</span>
+  <div class="options"><div>A. some; any</div><div>B. any; some</div><div>C. any; any</div><div>D. some; some</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">否定句 isn't 用 any；第二句虽是疑问，但表"请求/希望对方答应"用 some（more polite）。milk 不可数，不加 s。</div></details>
+</div>
+
+<div class="q">13. The story is about a poor boy. ___ he became a brave knight and saved the kingdom. <span class="kp">[考点：故事衔接词·语篇·基础]</span>
+  <div class="options"><div>A. First</div><div>B. Finally</div><div>C. Suddenly</div><div>D. Because</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">从"穷男孩"到"成了勇敢骑士、拯救王国"是故事结局，用 Finally（最后）衔接最顺。讲故事衔接词：first→then→finally。</div></details>
+</div>
+
+<!-- ——— 三、完形填空（语篇逻辑） ——— -->
+<div class="section">三、完形填空（先读懂全文再填，每题2分，共16分）</div>
+<div class="passage">
+  Last Saturday was a special day for me. In the morning, my family <strong>__14__</strong> to the countryside by car. The weather <strong>__15__</strong> sunny and warm. We had a picnic near a small river. After lunch, my father and I <strong>__16__</strong> fishing, but we didn't catch anything!<br>
+  In the afternoon, we <strong>__17__</strong> a beautiful bird in a tree. My sister wanted to take a photo, so we all kept very <strong>__18__</strong>. <strong>__19__</strong> we were a little tired, we felt very happy. I will never <strong>__20__</strong> this wonderful day. Now I <strong>__21__</strong> about it in my diary so that I can remember it forever.
+</div>
+
+<div class="q">14. <span class="kp">[考点：完形·过去时·基础]</span>
+  <div class="options"><div>A. go</div><div>B. went</div><div>C. are going</div><div>D. goes</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">Last Saturday 全文是过去的事，go→went。</div></details>
+</div>
+<div class="q">15. <span class="kp">[考点：完形·be 过去式·基础]</span>
+  <div class="options"><div>A. is</div><div>B. was</div><div>C. were</div><div>D. are</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">The weather 是单数主语 + 过去时，用 was。</div></details>
+</div>
+<div class="q">16. <span class="kp">[考点：完形·过去时短语·基础]</span>
+  <div class="options"><div>A. go</div><div>B. goes</div><div>C. went</div><div>D. going</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">go fishing（去钓鱼）在过去时里用 went fishing。</div></details>
+</div>
+<div class="q">17. <span class="kp">[考点：完形·不规则过去式·基础]</span>
+  <div class="options"><div>A. see</div><div>B. saw</div><div>C. seen</div><div>D. seeing</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">"看见"一只鸟，过去时 see→saw（不规则）。</div></details>
+</div>
+<div class="q">18. <span class="kp">[考点：完形·形容词作表语·基础]</span>
+  <div class="options"><div>A. quiet</div><div>B. quietly</div><div>C. quick</div><div>D. loud</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">kept very ___ 中 keep 后接形容词，"保持安静"用 quiet（quietly 是副词，不能作表语）。拍照要安静，loud 不合逻辑。</div></details>
+</div>
+<div class="q">19. <span class="kp">[考点：完形·逻辑衔接·中档]</span>
+  <div class="options"><div>A. Because</div><div>B. Although</div><div>C. So</div><div>D. And</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">"虽然有点累，但很开心"是转折让步，用 Although。前后情绪相反是判断关键。</div></details>
+</div>
+<div class="q">20. <span class="kp">[考点：完形·词义逻辑·中档]</span>
+  <div class="options"><div>A. forget</div><div>B. remember</div><div>C. enjoy</div><div>D. know</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">"美好的一天我永远不会___"，且下一句说"写进日记好让我永远记住"，所以是 never forget（永不忘记）。</div></details>
+</div>
+<div class="q">21. <span class="kp">[考点：完形·时态转换 Now·中档]</span>
+  <div class="options"><div>A. write</div><div>B. wrote</div><div>C. am writing</div><div>D. writes</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">Now 提示此刻正在做，全文虽是过去时，这句切换到现在进行时 am writing。读完形要随逻辑/时间词换时态。</div></details>
+</div>
+
+<!-- ——— 四、阅读理解 ——— -->
+<div class="section">四、阅读理解（每题2分，共14分）</div>
+<div class="passage">
+  <strong>Welcome to the Green Animal Club!</strong><br>
+  Do you love animals? Come and join us! Our club helps to protect animals in our city.<br>
+  <strong>Time:</strong> Every Saturday afternoon, 2:00-4:00<br>
+  <strong>Place:</strong> Room 305, Building B<br>
+  <strong>What we do:</strong>
+  <ul>
+    <li>We learn about different animals and why some of them are in danger.</li>
+    <li>We make posters to tell people not to hurt animals.</li>
+    <li>Once a month, we visit the city zoo to help the workers.</li>
+  </ul>
+  <strong>Rules:</strong> You must be on time. You mustn't bring food to the animals. You don't have to pay any money — it's free!<br>
+  If you want to join, please call Mr. Green at 555-0188 before this Friday.
+</div>
+
+<div class="q">22. The Green Animal Club meets ___. <span class="kp">[考点：阅读·细节·基础]</span>
+  <div class="options"><div>A. every morning</div><div>B. every Saturday afternoon</div><div>C. every day</div><div>D. once a year</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">Time 一行直接写 Every Saturday afternoon。细节题回原文定位 Time。</div></details>
+</div>
+<div class="q">23. Club members do NOT ___. <span class="kp">[考点：阅读·细节+推断·中档]</span>
+  <div class="options"><div>A. learn about animals</div><div>B. make posters</div><div>C. bring food to the animals</div><div>D. visit the zoo</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">规则里 You mustn't bring food to the animals（禁止喂食），所以"不做"的是 C。A/B/D 在 What we do 里都提到。</div></details>
+</div>
+<div class="q">24. The words "in danger" probably mean ___. <span class="kp">[考点：阅读·猜词·中档]</span>
+  <div class="options"><div>A. very safe</div><div>B. may die out</div><div>C. very strong</div><div>D. friendly</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">club 是"保护(protect)动物"的，"in danger"和保护相对，指动物"有危险、可能灭绝(die out)"。靠上下文 protect/hurt 猜词。</div></details>
+</div>
+<div class="q">25. How much do you pay to join the club? <span class="kp">[考点：阅读·细节·基础]</span>
+  <div class="options"><div>A. Nothing, it's free</div><div>B. A little money</div><div>C. 555 yuan</div><div>D. 305 yuan</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">规则里 You don't have to pay any money — it's free（免费）。别被 555/305 这些数字干扰，那是电话和房间号。</div></details>
+</div>
+<div class="q">26. From the notice, we can learn that the club members ___. <span class="kp">[考点：阅读·主旨推断·压轴]</span>
+  <div class="options"><div>A. only play games</div><div>B. care about protecting animals</div><div>C. don't like the zoo</div><div>D. sell animals for money</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">综合全文（保护动物、做海报、去动物园帮忙）可推断成员"关心保护动物"。这是概括推断题，要看整体而非一句。</div></details>
+</div>
+<div class="q">27. If you want to join, you should call Mr. Green ___. <span class="kp">[考点：阅读·细节·基础]</span>
+  <div class="options"><div>A. on Saturday</div><div>B. after Friday</div><div>C. before this Friday</div><div>D. anytime next month</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">最后一句 call…before this Friday。注意 before（之前），不是 after。</div></details>
+</div>
+<div class="q">28. Lucy is often late. According to the rules, she needs to ___. <span class="kp">[考点：阅读·规则应用·压轴]</span>
+  <div class="options"><div>A. bring some food</div><div>B. be on time</div><div>C. pay money</div><div>D. stay at home</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">把规则 You must be on time 应用到"Lucy 常迟到"这个新情境——她需要"守时(be on time)"。这是迁移应用题，把规则用到具体人身上。</div></details>
+</div>
+
+<!-- ——— 五、情境补全对话 ——— -->
+<div class="section">五、情境补全对话（信息整合，每空2分，共8分）</div>
+<div class="tip no-print-tip">从方框里选句子填进对话，使上下文连贯。多出一个选项不用。</div>
+<div class="passage">
+  <strong>方框选项：</strong><br>
+  A. Who are you going with?　B. What are you doing?　C. When are you leaving?　D. Remember to take some water.　E. How much is it?
+</div>
+<div class="passage">
+  Anna: Hi, Ben! <strong>__29__</strong><br>
+  Ben: I'm planning my weekend. I want to go hiking.<br>
+  Anna: Sounds fun! <strong>__30__</strong><br>
+  Ben: I'm going with my cousin.<br>
+  Anna: <strong>__31__</strong><br>
+  Ben: We're leaving at 7 o'clock on Saturday morning.<br>
+  Anna: Wow, so early! <strong>__32__</strong><br>
+  Ben: Don't worry, I will. Thanks!
+</div>
+
+<div class="q">29. <span class="kp">[考点：补全对话·现在进行时问句·基础]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">B（What are you doing?）</div><div class="sol">下一句 I'm planning…回答"在做什么"，故问句是 What are you doing?</div></details>
+</div>
+<div class="q">30. <span class="kp">[考点：补全对话·信息整合·中档]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">A（Who are you going with?）</div><div class="sol">回答 I'm going with my cousin（和表亲一起），对应问"和谁一起去"。</div></details>
+</div>
+<div class="q">31. <span class="kp">[考点：补全对话·信息整合·中档]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">C（When are you leaving?）</div><div class="sol">回答 at 7 o'clock on Saturday morning（时间），对应问"什么时候出发"。</div></details>
+</div>
+<div class="q">32. <span class="kp">[考点：补全对话·交际·基础]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">D（Remember to take some water.）</div><div class="sol">回答 Don't worry, I will（我会的），对应一句叮嘱"记得带水"。E（多少钱）与上下文无关，是干扰项。</div></details>
+</div>
+
+<!-- ——— 六、书面表达（情境任务·重过程规范） ——— -->
+<div class="section">六、书面表达（情境任务，15分）</div>
+<div class="q">33. 假设你是李华(Li Hua)。你的英国笔友 Mike 想知道你是怎么<strong>保持健康(keep fit)</strong>的。请根据要点给他回一封 60 词左右的短文。 <span class="kp">[考点：情境化写作·读写结合·过程规范·压轴]</span>
+  <ul>
+    <li>① 你常做的运动（至少两项，说清 how often）；</li>
+    <li>② 你的饮食习惯（eat well）；</li>
+    <li>③ 一个好的睡眠习惯。</li>
+  </ul>
+  <div class="warn">要求：要点齐全、时态正确（介绍习惯用<strong>一般现在时</strong>）、用上衔接词、书写规范。开头结尾已给。</div>
+  <p>Dear Mike,<br>Thank you for your letter. Now let me tell you how I keep fit.<br>
+  <span style="color:var(--soft)">（在此续写主体，约 60 词）</span></p>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <p>Please write to me soon.<br>Yours,<br>Li Hua</p>
+  <details><summary>答案与解析（含写作四步示范 + 范文）</summary>
+    <div class="sol"><strong>① 审题：</strong>对象 Mike，介绍"我怎么保持健康"＝讲<strong>习惯</strong>→用<strong>一般现在时</strong>、第一人称 I。</div>
+    <div class="sol"><strong>② 列点（确保不漏）：</strong>运动(play basketball twice a week / go swimming on Sundays)；饮食(eat vegetables &amp; fruit, little junk food)；睡眠(go to bed early, sleep nine hours)。</div>
+    <div class="sol"><strong>③ 连句成段：</strong>用 First / Second / Also 把三点串起来。<br>
+    <strong>④ 检查：</strong>三单 -s（he/she 才加，这里主语是 I 不加）、时态统一、首字母大写。</div>
+    <div class="ans" style="margin-top:8px;">参考范文：</div>
+    <div class="sol">Dear Mike,<br>
+    Thank you for your letter. Now let me tell you how I keep fit.<br>
+    First, I do sports often. I play basketball twice a week and I go swimming every Sunday. Second, I eat well. I have lots of vegetables and fruit, and I don't eat much junk food. Also, I go to bed early and sleep for about nine hours every night. These good habits make me healthy and happy.<br>
+    Please write to me soon.<br>
+    Yours,<br>
+    Li Hua</div>
+    <div class="sol" style="margin-top:6px;">（评分看：三点是否齐全 + 衔接词是否连贯 + 一般现在时/人称是否对 + 卷面。范文用了 First/Second/Also 衔接，频度 twice a week/every Sunday/every night，均为一般现在时。）</div>
+  </details>
+</div>
+
+</div>
+</body>
+</html>

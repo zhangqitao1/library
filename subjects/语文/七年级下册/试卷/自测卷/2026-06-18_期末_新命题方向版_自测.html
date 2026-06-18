@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--
+  语文七下·期末·新命题方向版（2026 济南新政）自测卷
+  复用 templates/试卷模板.html 骨架；自包含·可打印·答案折叠；公式仅 Unicode；无"如图"缺图。
+  显著落地四方向：①减记忆增高阶 ②长情境先提取 ③跨学科+探究 ④重过程规范。
+  全卷为按命题趋势自拟的【非真题】；现代文阅读语段为命题原创；非连续文本数据为示例情境数据。
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>语文 · 七年级下册 · 期末（新命题方向版）自测卷</title>
+<style>
+  :root { --ink:#1f2937; --line:#d1d5db; --soft:#6b7280; --brand:#2563eb; --warn:#b45309; --ok:#047857; --nd:#7c3aed; }
+  * { box-sizing: border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+         color:var(--ink); max-width:860px; margin:24px auto; padding:0 20px; line-height:1.85; font-size:15px; }
+  header { border-bottom:2px solid var(--ink); padding-bottom:12px; margin-bottom:8px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  h2 { font-size:18px; color:var(--brand); margin:28px 0 10px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  h3 { font-size:16px; margin:18px 0 8px; }
+  .meta { color:var(--soft); font-size:14px; }
+  .tip  { background:#eff6ff; border-left:4px solid var(--brand); padding:8px 12px; font-size:14px; color:#1e40af; margin:14px 0; border-radius:4px; }
+  .warn { background:#fffbeb; border-left:4px solid var(--warn);  padding:8px 12px; font-size:14px; color:#92400e; margin:14px 0; border-radius:4px; }
+  .mat  { background:#f8fafc; border:1px solid var(--line); border-left:4px solid var(--soft); padding:10px 14px; margin:12px 0; border-radius:4px; font-size:14.5px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 16px; font-size:14px; }
+  th,td { border:1px solid var(--line); padding:6px 10px; text-align:left; vertical-align:top; }
+  th { background:#f3f4f6; font-weight:600; }
+  ul { margin:6px 0; padding-left:22px; } li { margin:3px 0; }
+  .section { font-weight:700; font-size:17px; margin:22px 0 10px; color:var(--brand); }
+  .q { margin:16px 0; }
+  .kp { font-size:12px; color:var(--soft); }
+  .nd { font-size:12px; color:var(--nd); font-weight:600; }
+  .options div { margin:3px 0 3px 16px; }
+  .fill { border-bottom:1px solid var(--ink); display:inline-block; min-width:100px; }
+  .answerline { border-bottom:1px solid var(--line); height:28px; margin-top:8px; }
+  details { margin-top:8px; background:#f9fafb; border:1px solid var(--line); border-radius:6px; padding:6px 12px; }
+  summary { cursor:pointer; color:var(--brand); font-size:14px; font-weight:600; }
+  .ans { color:var(--ok); font-weight:600; }
+  .sol { font-size:14px; margin-top:4px; }
+  .toolbar { text-align:right; margin:10px 0; position:sticky; top:0; background:#fff; padding:8px 0; z-index:10; }
+  button { background:var(--brand); color:#fff; border:0; padding:6px 14px; border-radius:6px; cursor:pointer; font-size:14px; margin-left:6px; }
+  .pagebreak { page-break-before:always; margin-top:40px; padding-top:20px; border-top:3px double var(--ink); }
+  @media print {
+    .toolbar { display:none; } .no-print-tip { display:none; }
+    details { border:none; background:none; }
+    details:not([open]) summary { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== 上半部：新方向说明 + 猜题（复习导读） ========== -->
+<header>
+  <h1>语文 · 七年级下册 · 期末（新命题方向版）复习导读</h1>
+  <div class="meta">统编版2024 · 小雨 · 2026-06-18 · 对标 2026 济南综合评价命题方向</div>
+</header>
+
+<div class="tip no-print-tip">📌 用法：先读下面"四个新方向"，明白这套卷子和老卷哪里不一样（少背诵、多运用）→ 再做下半部自测卷，做完点"显示全部答案"对照。带 ⚠️ 的"待核对"处以课本为准。</div>
+
+<h2>一、本卷四个新命题方向（2026）</h2>
+<table>
+  <tr><th>方向</th><th>这套卷怎么落地</th><th>对应题号</th></tr>
+  <tr><td><strong>① 减记忆、增高阶</strong></td><td>少"是什么"，多"为什么/比较/怎么用"；默写改情境式</td><td>6、7、11、12、14、16、18</td></tr>
+  <tr><td><strong>② 长情境先提取</strong></td><td>真实长语段 / 非连续文本，先读信息再答题</td><td>1–5、15、16</td></tr>
+  <tr><td><strong>③ 跨学科 + 探究</strong></td><td>语文嵌历史背景、文言课内外对比、航天科普信息整合、活动任务</td><td>5、11、12、14、15、16、20</td></tr>
+  <tr><td><strong>④ 重过程规范</strong></td><td>赏析/简答按"手法→分析→效果"分步、用术语，解析示范步骤</td><td>7、11、18</td></tr>
+</table>
+
+<h2>二、期末猜题（高频考点预测，非真题）</h2>
+<div class="warn">⚠️ 下面是按"课标必背 + 命题新方向 + 你易错点"猜的<strong>最可能考方向</strong>，是我们一起的预测，<strong>不是老师原题/真题/内部题</strong>，用来押重点。</div>
+<table>
+  <tr><th>#</th><th>预测考点</th><th>可能题型（新方向）</th></tr>
+  <tr><td>1</td><td>本土文化/活动情境里的字词、病句、衔接</td><td>长语段综合运用</td></tr>
+  <tr><td>2</td><td>情境式 / 比较式理解性默写</td><td>情境默写</td></tr>
+  <tr><td>3</td><td>《陋室铭》与课外同主题短文对比</td><td>文言课内外对比阅读</td></tr>
+  <tr><td>4</td><td>古诗炼字赏析（三步规范）</td><td>诗歌鉴赏</td></tr>
+  <tr><td>5</td><td>名著结合社会背景分析人物命运</td><td>名著探究</td></tr>
+  <tr><td>6</td><td>航天/科技类非连续文本信息整合</td><td>跨学科阅读</td></tr>
+  <tr><td>7</td><td>活动任务式 / 情境化作文</td><td>任务驱动写作</td></tr>
+</table>
+
+<!-- ========== 下半部：自测卷（必有） ========== -->
+<div class="pagebreak">
+<header>
+  <h1>语文 · 七年级下册 · 期末（新命题方向版）自测卷</h1>
+  <div class="meta">
+    <span>科目：语文</span>
+    <span>范围：七下期末全册</span>
+    <span>日期：2026-06-18</span>
+    <span>类型：期末·新命题方向版</span>
+    <span>建议限时：90分钟</span>
+    <span>难度配比：基础6 : 中档3 : 压轴1（约12:6:2）</span>
+  </div>
+  <div class="meta"><span>姓名：<span class="fill">小雨</span></span><span>用时：<span class="fill"></span>分钟</span></div>
+</header>
+<div class="tip">不计分，是学习工具。简答/赏析请<strong>分步、用术语</strong>写过程，先独立做完，再点"显示全部答案"对照。本卷为<strong>非真题</strong>（按命题趋势自拟），现代文语段为原创、非连续文本数据为示例情境数据。</div>
+<div class="toolbar">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">显示全部答案</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">隐藏全部答案</button>
+</div>
+
+<!-- ===== 一、积累与运用（长情境语段） ===== -->
+<div class="section">一、积累与运用（阅读下面语段，完成 1–5 题）<span class="nd">〔长情境先提取〕</span></div>
+<div class="mat">
+为传承家乡文化，济南某中学开展"泉城非遗进校园"活动。校园里，鼓子秧歌的鼓点震耳欲<u>聋</u>，<u>面塑</u>艺人指尖翻飞，一个个人物栩栩如生；皮影戏的光影在白布上腾挪跳跃，引得同学们驻足观看。一位老艺人感慨：年轻人愿意来看，老手艺就<u>① ____</u>。___________这次活动，使大家更加直观地感受到了传统技艺的魅力。
+</div>
+
+<div class="q">1.（基础）语段中加点字的读音和字形，全都正确的一项是 <span class="kp">[考点：字音字形]</span>
+  <div class="options"><div>A. 震耳欲聋（lóng）　面塑（sù）</div><div>B. 震耳欲聋（lóng）　面塑（shuò）</div><div>C. 震耳欲聩（lóng）　面塑（sù）</div><div>D. 震耳欲聋（nóng）　面塑（shuò）</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">成语是"震耳欲<strong>聋</strong>"（lóng，耳朵快聋了），不是"聩"；"塑"读 sù 不读 shuò。B、C、D 各错一处。</div></details>
+</div>
+
+<div class="q">2.（基础）在语段横线①处填入的成语，最恰当的一项是 <span class="kp">[考点：成语运用]</span>
+  <div class="options"><div>A. 销声匿迹</div><div>B. 后继有人</div><div>C. 一蹶不振</div><div>D. 默默无闻</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">语境是"年轻人愿意来看，老手艺就……"，应表"有人传承下去"，选"后继有人"。A、C 都是贬义/消极，与"愿意来看"的转折不合；D"默默无闻"指不出名，不切传承义。</div></details>
+</div>
+
+<div class="q">3.（基础）语段画线句"____________这次活动，使大家更加直观地感受到了传统技艺的魅力"是病句，修改最恰当的一项是 <span class="kp">[考点：病句辨析（成分残缺）]</span>
+  <div class="options"><div>A. 在开头加"通过"</div><div>B. 在开头加"通过"，并删去"使"</div><div>C. 把"感受"改为"感觉"</div><div>D. 把"直观"删去</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">"通过……使……"连用会让句子<strong>缺主语</strong>。删掉"使"，让"大家"作主语：通过这次活动，大家更加直观地感受到了……。只加"通过"不删"使"仍无主语，故选 B。</div></details>
+</div>
+
+<div class="q">4.（基础）活动结束语要把下面四句排成一段连贯的话，正确顺序是 <span class="kp">[考点：句子衔接与排序]</span>
+  <p>① 它们是先辈留给我们的"活的历史"。<br>② 非遗不只是博物馆里的展品。<br>③ 让古老的技艺在我们手中继续生长。<br>④ 守护非遗，就是守护我们共同的根。</p>
+  <div class="options"><div>A. ②①④③</div><div>B. ①②③④</div><div>C. ④②①③</div><div>D. ②④①③</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">先破除误解（②非遗不只是展品）→ 给出定位（①是"活的历史"）→ 升华意义（④守护根）→ 落到行动（③继续生长）。逻辑"是什么→为什么→怎么做"，故 ②①④③。</div></details>
+</div>
+
+<div class="q">5.（中档）请你为"泉城非遗进校园"活动拟一条宣传标语，并简要说明设计理由。 <span class="kp">[考点：综合性学习·拟写标语]</span> <span class="nd">〔活动任务情境·过程规范〕</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">示例：传非遗薪火，做泉城新人。（或：指尖传匠心，校园续非遗。）</div><div class="sol">评分要点（踩点给分）：①扣"非遗/泉城/校园"主题；②语言简洁、最好对仗或押韵、朗朗上口；③理由说清"用了什么手法+想达到什么效果"（如：用对偶突出'传承'与'传播'，号召同学参与）。开放题，言之成理即可。</div></details>
+</div>
+
+<!-- ===== 二、古诗文积累与鉴赏 ===== -->
+<div class="section">二、古诗文积累与鉴赏（6–8 题）</div>
+
+<div class="q">6.（基础）班级"毕业留言墙"用古诗互勉，请把名句补充完整。 <span class="kp">[考点：理解性默写]</span> <span class="nd">〔情境式/比较式默写〕</span>
+  <p>（1）遇到挫折别气馁，正如陆游《游山西村》所说：山重水复疑无路，______。<br>
+     （2）登高才能望远，当有杜甫《望岳》中"会当凌绝顶，______"的志气。<br>
+     （3）离别也能有奉献的胸怀，龚自珍《己亥杂诗》写道：______，化作春泥更护花。</p>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（1）柳暗花明又一村　（2）一览众山小　（3）落红不是无情物</div><div class="sol">三句出自三首不同的诗，按"情境/情感"提示来默——这就是新方向的默写练法。注意"暗""览""落"别写错。</div></details>
+</div>
+
+<div class="mat">
+【约客】（南宋）赵师秀<br>
+黄梅时节家家雨，青草池塘处处蛙。<br>
+有约不来过夜半，闲敲棋子落灯花。
+</div>
+
+<div class="q">7.（中档）请赏析"闲敲棋子落灯花"中"敲"字的妙处。（按"手法/字义 → 结合诗句分析 → 表达效果与情感"三步作答） <span class="kp">[考点：古诗炼字赏析]</span> <span class="nd">〔高阶·过程规范〕</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">"敲"是一个动作细节：诗人约客久候不至，百无聊赖中下意识地轻敲棋子，连灯花都被震落。</div><div class="sol">三步示范：①炼字——"敲"写动作；②分析——夜半客不来，诗人独坐敲棋，以"动"（敲、落灯花）反衬夜的"静"；③效果与情感——把久候不至的<strong>寂寞、怅惘</strong>（焦躁中故作闲适）含蓄传神地写了出来。答题要写够这三步，只写"生动"不得分。</div></details>
+</div>
+
+<div class="q">8.（基础）《约客》表达了诗人怎样的心情？ <span class="kp">[考点：古诗情感主旨]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">表达了诗人雨夜独坐、约客久候而不至的寂寞、怅惘（失落）之情。</div></details>
+</div>
+
+<!-- ===== 三、文言文课内外对比阅读 ===== -->
+<div class="section">三、文言文阅读（课内外对比，9–12 题）<span class="nd">〔跨学科·课内外对比〕</span></div>
+<div class="mat">
+【甲】山不在高，有仙则名。水不在深，有龙则灵。斯是陋室，惟吾德馨。苔痕上阶绿，草色入帘青。谈笑有鸿儒，往来无白丁。可以调素琴，阅金经。无丝竹之乱耳，无案牍之劳形。南阳诸葛庐，西蜀子云亭。孔子云：何陋之有？<br><span class="meta">——刘禹锡《陋室铭》</span><br><br>
+【乙】（先生）闲静少言，不慕荣利。好读书，不求甚解；每有会意，便欣然忘食。……环堵萧然，不蔽风日；短褐穿结，箪瓢屡空，晏如也。常著文章自娱，颇示己志。忘怀得失，以此自终。<br><span class="meta">——陶渊明《五柳先生传》（节选）⚠️ 课外文段引文，以教材原文为准</span>
+</div>
+
+<div class="q">9.（基础）解释下列加点词的意思。 <span class="kp">[考点：文言实词]</span>
+  <p>（1）有仙则<strong>名</strong>：______　（2）惟吾德<strong>馨</strong>：______　（3）<strong>屡</strong>空：______　（4）晏如也（<strong>晏如</strong>）：______</p>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（1）名：出名、有名（名词作动词）；（2）馨：德行美好（香气远播，喻品德高尚）；（3）屡：屡次、经常；（4）晏如：安然自若的样子。</div></details>
+</div>
+
+<div class="q">10.（基础）用现代汉语翻译句子：斯是陋室，惟吾德馨。 <span class="kp">[考点：文言翻译]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">这是简陋的屋子，只因我（住屋人）的品德高尚（就不觉得简陋了）。</div><div class="sol">"馨"译"品德美好"不能漏；"斯""惟"分别译"这""只"。</div></details>
+</div>
+
+<div class="q">11.（中档）甲、乙两文的主人公生活都很清贫，但精神态度有何共同点？他们各自借什么来表现这种态度？ <span class="kp">[考点：课内外对比·主旨理解]</span> <span class="nd">〔高阶·比较〕</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">共同点：都安贫乐道、不慕荣利，看重精神追求。</div><div class="sol">分点：甲借"陋室"不陋——谈笑鸿儒、调素琴阅金经、以诸葛庐子云亭自比，表现安贫乐道、品德高洁（德馨）；乙借"环堵萧然、箪瓢屡空"却"晏如也""忘怀得失"，表现不慕名利、安于清贫而自得其乐。</div></details>
+</div>
+
+<div class="q">12.（压轴）刘禹锡写《陋室铭》时正遭贬谪，陶渊明则弃官归隐。联系他们的时代与遭遇，探究"安居陋室、箪瓢屡空"背后是怎样的人生追求？再举一位你了解的历史人物（如颜回、杜甫等），谈谈这种精神在今天有什么意义。 <span class="kp">[考点：知人论世·跨学科探究]</span> <span class="nd">〔跨学科+探究·开放〕</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（开放题，按要点自评）</div><div class="sol">评分要点：①点出背景——刘禹锡被贬仍不消沉、陶渊明厌恶官场污浊而归隐；②概括追求——都把"精神操守/人格独立"看得比物质名利更重，是"安贫乐道、洁身自好"；③举例恰当——如颜回"一箪食一瓢饮……不改其乐"，杜甫身处困境仍忧国忧民；④联系今天——物质丰富的当下，仍需要不被名利绑架、坚守内心追求的定力。能扣住"背景—追求—举例—现实意义"即可。</div></details>
+</div>
+
+<!-- ===== 四、名著阅读 ===== -->
+<div class="section">四、名著阅读（13–14 题）</div>
+
+<div class="q">13.（基础）《骆驼祥子》中祥子买车的经历可概括为"______"。请补全：第一次，他省吃俭用买的新车被______抢走；第二次，他攒下的买车钱被______敲诈一空；第三次，靠______（人）的钱买了车，又因她难产去世而被迫卖掉。 <span class="kp">[考点：名著情节]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">三起三落；乱兵（大兵）；孙侦探；虎妞</div><div class="sol">祥子是"由好变坏"，不是一开始就坏；作者是老舍，故事发生在北平（今北京）。</div></details>
+</div>
+
+<div class="q">14.（中档）结合 20 世纪 20 年代旧中国（军阀混战、城市底层贫困）的社会背景，分析祥子为什么会从老实勤快"由好变坏"？ <span class="kp">[考点：名著·人物与社会背景]</span> <span class="nd">〔跨学科+高阶〕</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">祥子的堕落不是因为他懒，而是黑暗社会一步步把他逼垮的。</div><div class="sol">分点：①军阀乱兵抢走他的车（个人奋斗第一次破灭）；②反动侦探敲诈光他的积蓄；③把人不当人的剥削与接连的打击（虎妞之死等），让他奋斗的希望反复落空，最终丧失生活信念、自暴自弃。小说借此揭露"旧社会把人变成鬼"。</div></details>
+</div>
+
+<!-- ===== 五、非连续文本阅读 ===== -->
+<div class="section">五、非连续文本阅读（跨学科·航天，15–16 题）<span class="nd">〔长情境先提取·跨学科·信息整合〕</span></div>
+<div class="mat">
+<strong>【材料一】</strong>中国载人航天精神是"特别能吃苦、特别能战斗、特别能攻关、特别能奉献"。一艘飞船上天，背后是成千上万名科研、工程、保障人员的协作；一个微小零件的可靠，往往要经过成百上千次试验。<br><br>
+<strong>【材料二】</strong>某中学"仰望星空"科普周三项活动参与人次统计（<span class="meta">示例情境数据，非真实统计</span>）：<br>
+<table>
+  <tr><th>活动</th><th>航天知识讲座</th><th>航天模型制作</th><th>观影《太空一日》改编</th></tr>
+  <tr><td>参与人次</td><td>320</td><td>210</td><td>410</td></tr>
+</table>
+<strong>【材料三】</strong>一名参加活动的同学写道："原来航天不是天才的专利，而是无数普通人一颗螺丝、一颗螺丝拧出来的。"
+</div>
+
+<div class="q">15.（基础）根据【材料二】，三项活动中参与人次最多的是______，最少的是______。 <span class="kp">[考点：非连续文本·信息提取]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">最多：观影《太空一日》改编（410 人次）；最少：航天模型制作（210 人次）。</div><div class="sol">读表先比数据大小再作答——这就是"先提取信息"的练法。</div></details>
+</div>
+
+<div class="q">16.（中档）综合三则材料，说说"中国载人航天精神"能给中学生的学习带来哪些启示？（至少两点，须结合材料） <span class="kp">[考点：非连续文本·信息整合与运用]</span> <span class="nd">〔高阶·信息整合〕</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（言之成理即可，至少答两点）</div><div class="sol">要点示例：①由材料一"特别能吃苦、能攻关"——学习要肯下苦功、敢于攻克难点，不怕反复试错；②由材料三"一颗螺丝一颗螺丝拧出来"——踏实积累、不轻视小事，普通人也能成事；③由材料一"成千上万人协作"——重视团队合作；④由材料二参与人次——主动参加实践活动，把知识用起来。每点须"结合材料+谈对学习的启示"。</div></details>
+</div>
+
+<!-- ===== 六、现代文阅读 ===== -->
+<div class="section">六、现代文阅读（阅读《巷口的修表人》，完成 17–19 题）</div>
+<div class="mat">
+<strong>巷口的修表人</strong>（命题原创语段）<br>
+　　巷口那家修表铺，只有半人高的玻璃柜台，柜里躺着几十块等人来取的旧表。修表的是位老人，背有些驼，左眼上常年夹着一只黑色的放大镜。<br>
+　　那年我的电子表进了水，停在三点十七分。我把表递过去，他没急着拆，先把表贴到耳边听了听，又对着光转了两圈，才慢慢说："还有救。"他的手指很粗，可<u>捏起那枚比米粒还小的螺丝时，却轻得像怕碰碎一片雪花</u>。镊子一点点探进去，他屏住呼吸，连花白的眉毛都一动不动。<br>
+　　我等得不耐烦，问要多久。他没抬头，只说："急不得，钟表和人一样，乱了就得一格一格地拨回来。"十分钟后，秒针"嗒"地一声又走了起来。我要付钱，他摆摆手："两块。"我愣住——这点工夫，他本可以多要些的。<br>
+　　后来那家铺子拆了，巷口空了一块。我的表早换了新的，可每次它准点跳秒，我总会想起那句"一格一格地拨回来"，还有那双怕碰碎雪花似的手。
+</div>
+
+<div class="q">17.（基础）老人说"钟表和人一样，乱了就得一格一格地拨回来"，这句话表面是在说______，实际还告诉"我"______。 <span class="kp">[考点：词句含义理解]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">表面说修表要一格一格地慢慢拨准（急不得）；实际告诉"我"：做人做事也要沉得住气、踏实认真，乱了就一步步耐心调整。</div><div class="sol">这类题要答"表层义+深层（做人道理）"两层。</div></details>
+</div>
+
+<div class="q">18.（中档）请从描写方法的角度，赏析画线句"捏起那枚比米粒还小的螺丝时，却轻得像怕碰碎一片雪花"。（按"手法 → 分析 → 效果"作答） <span class="kp">[考点：句子赏析]</span> <span class="nd">〔过程规范〕</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">运用细节（动作）描写和比喻。</div><div class="sol">三步示范：①手法——抓"捏""轻"的动作细节，并用"像怕碰碎一片雪花"作比喻；②分析——用"比米粒还小""怕碰碎雪花"写出动作的极轻极细；③效果——生动表现老人手艺的娴熟与做事的专注、一丝不苟，流露"我"的敬佩。要写满三步。</div></details>
+</div>
+
+<div class="q">19.（基础）文章结尾反复写到"那双手"和"一格一格地拨回来"，有什么作用？ <span class="kp">[考点：结尾作用/情感主旨]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">结构上首尾呼应、照应前文，使文章浑然一体；内容上突出修表人专注厚道的形象，深化主旨，表达"我"对这位平凡手艺人的怀念与敬意。</div></details>
+</div>
+
+<!-- ===== 七、写作 ===== -->
+<div class="section">七、写作（压轴，20 题）</div>
+
+<div class="q">20.（压轴）参加完"泉城非遗进校园"活动后，你也许想起了身边某位有手艺、有坚守的普通人，或一段让你"懂得了什么"的经历。请以《那双手》为题，或自拟题目以"______，让我懂得______"的形式，写一篇<strong>记叙文</strong>。 <span class="kp">[考点：情境化·任务驱动写作]</span> <span class="nd">〔活动情境·过程规范〕</span>
+  <p>要求：①写一个真实的人或一件具体的事；②至少一处细节描写（动作/神态/语言/环境）；③用具体的事和细节表达感情，不空喊口号；④不少于 500 字；⑤文中不出现真实校名、人名。</p>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（开放题，按评分要点自评）</div><div class="sol">评分要点：①扣题——围绕"那双手/我懂得了……"一个中心，不跑题；②选材——有一件具体的事，不泛泛而谈；③细节——至少一处生动的动作/神态/语言/环境描写；④抒情——情感通过事和细节自然流露，而非"我好感动"式空喊；⑤结构——开头结尾呼应，详略得当；⑥语言——通顺、少病句，字数达标。</div></details>
+</div>
+
+</div>
+</body>
+</html>

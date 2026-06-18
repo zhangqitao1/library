@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生物 · 七年级下册 · 期末（新命题方向版）</title>
+<style>
+  :root { --ink:#1f2937; --line:#d1d5db; --soft:#6b7280; --brand:#2563eb; --warn:#b45309; --ok:#047857; }
+  * { box-sizing: border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+         color:var(--ink); max-width:860px; margin:24px auto; padding:0 20px; line-height:1.85; font-size:15px; }
+  header { border-bottom:2px solid var(--ink); padding-bottom:12px; margin-bottom:8px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  h2 { font-size:18px; color:var(--brand); margin:28px 0 10px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  h3 { font-size:16px; margin:18px 0 8px; }
+  .meta { color:var(--soft); font-size:14px; }
+  .tip  { background:#eff6ff; border-left:4px solid var(--brand); padding:8px 12px; font-size:14px; color:#1e40af; margin:14px 0; border-radius:4px; }
+  .warn { background:#fffbeb; border-left:4px solid var(--warn);  padding:8px 12px; font-size:14px; color:#92400e; margin:14px 0; border-radius:4px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 16px; font-size:14px; }
+  th,td { border:1px solid var(--line); padding:6px 10px; text-align:left; vertical-align:top; }
+  th { background:#f3f4f6; font-weight:600; }
+  ul { margin:6px 0; padding-left:22px; } li { margin:3px 0; }
+  .section { font-weight:700; font-size:17px; margin:22px 0 10px; color:var(--brand); }
+  .q { margin:16px 0; }
+  .kp { font-size:12px; color:var(--soft); }
+  .options div { margin:3px 0 3px 16px; }
+  .fill { border-bottom:1px solid var(--ink); display:inline-block; min-width:100px; }
+  .answerline { border-bottom:1px solid var(--line); height:28px; margin-top:8px; }
+  details { margin-top:8px; background:#f9fafb; border:1px solid var(--line); border-radius:6px; padding:6px 12px; }
+  summary { cursor:pointer; color:var(--brand); font-size:14px; font-weight:600; }
+  .ans { color:var(--ok); font-weight:600; }
+  .sol { font-size:14px; margin-top:4px; }
+  .toolbar { text-align:right; margin:10px 0; position:sticky; top:0; background:#fff; padding:8px 0; z-index:10; }
+  button { background:var(--brand); color:#fff; border:0; padding:6px 14px; border-radius:6px; cursor:pointer; font-size:14px; margin-left:6px; }
+  .pagebreak { page-break-before:always; margin-top:40px; padding-top:20px; border-top:3px double var(--ink); }
+  @media print {
+    .toolbar { display:none; } .no-print-tip { display:none; }
+    details { border:none; background:none; }
+    details:not([open]) summary { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== 上半部：复习资料 ========== -->
+<header>
+  <h1>生物 · 七年级下册 · 期末复习资料（新命题方向版）</h1>
+  <div class="meta">济南版2024 · 小雨 · 2026-06-18 · ★八年级会考科目</div>
+</header>
+
+<div class="tip no-print-tip">📌 用法：先通读复习资料 → 合书把"光合呼吸对比、花发育路线、遗传图解、各张图"默背/默画出来 → 再做下半部自测卷（不计分）。本册重点＝<strong>植物生理＋生殖遗传</strong>；<strong>人体生理（消化/呼吸/循环/泌尿/神经）在八上</strong>。⚠️ 处开学对课本封面核对。</div>
+
+<div class="warn">🎯 <strong>2026 命题新方向（据济南中考新政）</strong>：生物会考已从"背知识点"转向"用素养解决真实问题"——题干常给<strong>农业、生态、健康、育种</strong>等真实情境，先读信息再答；<strong>实验探究</strong>占比加大（变量、数据、误差、改进）；答题要<strong>术语规范、结论有依据</strong>。本卷就照这个方向出。</div>
+
+<h2>一、全册框架（先串脉络）</h2>
+<table>
+  <tr><th>单元</th><th>章</th><th>核心</th></tr>
+  <tr><td rowspan="2">第三单元 植物的生活</td><td>第一章 光合作用等生命活动</td><td>根吸水、蒸腾、光合、呼吸</td></tr>
+  <tr><td>第二章 开花结果</td><td>花结构、传粉受精、种子萌发、芽</td></tr>
+  <tr><td rowspan="3">第四单元 物种的延续</td><td>第一章 生殖</td><td>无性/有性生殖</td></tr>
+  <tr><td>第二章 人类生殖与青春期</td><td>受精卵、胚胎发育、第二性征</td></tr>
+  <tr><td>第三章 遗传与变异</td><td>DNA·基因·染色体、显隐性、性别决定、变异、育种</td></tr>
+</table>
+
+<h2>二、植物生理（★会考识图＋对比）</h2>
+<ul>
+  <li><strong>根尖四区</strong>（尖端往上）：根冠→分生区→伸长区→成熟区；<strong>吸水主力＝成熟区（根毛区）</strong>。</li>
+  <li><strong>导管</strong>运水和无机盐（向上↑）；<strong>筛管</strong>运有机物（向下↓）。</li>
+  <li><strong>蒸腾</strong>：水主要从<strong>气孔</strong>散失，气孔开闭由<strong>保卫细胞</strong>控制；意义：促进水和无机盐运输、降温。</li>
+</ul>
+<table>
+  <tr><th>项目</th><th>光合作用</th><th>呼吸作用</th></tr>
+  <tr><td>场所</td><td>叶绿体</td><td>线粒体</td></tr>
+  <tr><td>原料</td><td>二氧化碳＋水</td><td>有机物＋氧气</td></tr>
+  <tr><td>产物</td><td>有机物＋氧气</td><td>二氧化碳＋水</td></tr>
+  <tr><td>能量</td><td>储存（光能→化学能）</td><td>释放能量</td></tr>
+  <tr><td>条件</td><td>需要光（只在有光时）</td><td>有光无光都进行（昼夜不停）</td></tr>
+</table>
+<div class="warn">⚠️ 白天<strong>光合和呼吸同时进行</strong>；煮熟的种子不再呼吸。反应式：CO₂＋H₂O →（光能/叶绿体）→ 有机物＋O₂。</div>
+
+<h2>三、开花结果（★发育路线图必背）</h2>
+<ul>
+  <li><strong>花主要部分＝雄蕊＋雌蕊</strong>；花粉在花药，胚珠在子房。</li>
+  <li><strong>发育路线</strong>：子房→果实；子房壁→果皮；胚珠→种子；受精卵→胚（吃的果肉多是<strong>果皮</strong>）。</li>
+  <li><strong>种子萌发</strong>外界三条件＝适宜温度、一定水分、充足空气；多数<strong>不需光</strong>；<strong>胚根最先</strong>突破种皮。</li>
+</ul>
+
+<h2>四、生殖（区分有性/无性）</h2>
+<ul>
+  <li>无性生殖：不经精卵结合（扦插、嫁接、克隆、组织培养、块茎发芽）。</li>
+  <li>有性生殖：经精卵结合（种子繁殖、试管婴儿＝体外受精）。</li>
+  <li>⚠️ 嫁接成活看<strong>形成层</strong>贴合，结出果实性状由<strong>接穗</strong>决定。</li>
+</ul>
+
+<h2>五、人类生殖与青春期</h2>
+<ul>
+  <li>发育起点＝<strong>受精卵</strong>；受精在<strong>输卵管</strong>，发育在<strong>子宫</strong>；<strong>胎盘</strong>交换物质但母子血液不混合。</li>
+  <li><strong>身高突增不是第二性征</strong>；遗精、月经都是正常生理现象。</li>
+</ul>
+
+<h2>六、遗传与变异（★会考重头）</h2>
+<ul>
+  <li>层次：细胞核→染色体→DNA→基因；染色体＝DNA＋蛋白质；基因是DNA上<strong>有遗传效应的片段</strong>。</li>
+  <li>显隐性：隐性性状要<strong>成对隐性基因（dd）</strong>才表现；表现型相同基因型可不同（DD/Dd）。</li>
+  <li>性别决定：女XX、男XY；生男生女由<strong>父亲精子（X或Y）</strong>决定，各约50%。</li>
+  <li>变异：可遗传＝遗传物质改变（太空椒＝诱变）；晒黑、施肥增产＝不可遗传。</li>
+</ul>
+
+<h2>七、新方向冲刺提示（怎么答情境/探究题）</h2>
+<div class="tip no-print-tip">📌 ① 读情境题：先圈"问什么、给了哪些条件/数据"，把生活语言翻译成课本概念再答。<br>② 探究题认五环节：<strong>假设→变量（单一变量、找对照）→过程→数据→误差/改进</strong>。<br>③ 结论要带依据，句式"因为（现象/数据）……所以（结论）……"，别只写一个词。</div>
+
+<h2>八、期末猜题（高频考点预测，非真题）</h2>
+<div class="warn">⚠️ 下面是按"会考核心＋你易错点＋2026命题趋势"猜的<strong>最可能考方向</strong>，是预测<strong>不是真题/内部题</strong>。会考重基础与情境探究，按基础:中档:压轴≈7:2:1 押。</div>
+<table>
+  <tr><th>猜测考点</th><th>为什么押它</th><th>最可能题型</th></tr>
+  <tr><td>光合验证实验（暗处理/酒精/碘液）</td><td>探究为重，过程+结论高频</td><td>实验探究题</td></tr>
+  <tr><td>光照强度与光合（数据/曲线）</td><td>新方向爱考数据处理</td><td>读表分析题</td></tr>
+  <tr><td>移栽/储粮/大棚增CO₂（生活情境）</td><td>用知识解释真实生产</td><td>情境选择/简答</td></tr>
+  <tr><td>花结构与发育路线、根尖（识图）</td><td>会考重识图</td><td>识图作答</td></tr>
+  <tr><td>显隐性推断、性别概率</td><td>遗传图解易混</td><td>遗传推断题</td></tr>
+  <tr><td>可遗传/不可遗传变异、诱变育种</td><td>例子判断常错</td><td>辨析/综合题</td></tr>
+</table>
+
+<!-- ========== 下半部：自测卷 ========== -->
+<div class="pagebreak">
+<header>
+  <h1>生物七下 · 期末自测卷（新命题方向版·模拟）</h1>
+  <div class="meta">
+    <span>姓名：<span class="fill">小雨</span></span>
+    <span>日期：2026-06-18</span>
+    <span>用时：<span class="fill"></span>分钟</span>
+    <span>建议限时：50分钟</span>
+  </div>
+</header>
+<div class="tip">不计分，是学习工具。范围＝七下期末全册（植物生理＋生殖遗传）。先独立做（探究题写清依据），再点"显示全部答案"对照。难度配比 ≈ <strong>基础:中档:压轴 = 7:2:1</strong>（基础约17题、中档约5题、压轴约2题，共24题）。</div>
+<div class="toolbar">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">显示全部答案</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">隐藏全部答案</button>
+</div>
+
+<div class="section">一、选择题（每题3分，共12题）</div>
+
+<div class="q">1. 农民移栽番茄苗时，常带一个"土坨"，并摘掉一部分叶片。带土坨和摘叶片，分别主要是为了？ <span class="kp">[考点：根毛/蒸腾作用·情境应用]</span>
+  <div class="options"><div>A. 保护根毛；减弱光合作用</div><div>B. 保护根毛；减弱蒸腾作用</div><div>C. 保护导管；减弱呼吸作用</div><div>D. 保护叶绿体；减弱蒸腾作用</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">幼嫩的根毛是吸水主力，带土坨可避免移栽时把根毛拉断；摘掉部分叶片减少叶片面积，降低蒸腾失水，防止幼苗萎蔫。</div></details>
+</div>
+
+<div class="q">2. 把一段去掉叶片的柳枝插入红墨水中，几小时后取出横切，茎内被染红的主要是？ <span class="kp">[考点：导管·实验情境]</span>
+  <div class="options"><div>A. 筛管</div><div>B. 导管</div><div>C. 形成层</div><div>D. 树皮</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">导管自下而上运输水和无机盐，红墨水随水分上升，被染红的就是导管所在部位。</div></details>
+</div>
+
+<div class="q">3. 夏季正午光照强、气温高时，许多植物叶片的气孔会部分关闭。这样做最直接的意义是？ <span class="kp">[考点：气孔/蒸腾·分析]</span>
+  <div class="options"><div>A. 增强光合作用</div><div>B. 减少水分过度散失、防止萎蔫</div><div>C. 加快呼吸作用</div><div>D. 促进传粉受精</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">正午高温强光下蒸腾过旺易缺水，关闭部分气孔可减少水分散失（代价是CO₂进入减少、光合也随之下降），这是植物的自我保护。</div></details>
+</div>
+
+<div class="q">4. 蔬菜大棚里白天适当增施二氧化碳能提高产量，其原理是？ <span class="kp">[考点：光合作用·情境]</span>
+  <div class="options"><div>A. CO₂是光合作用原料，增加可提高光合速率</div><div>B. CO₂是呼吸作用原料，增加可促进呼吸</div><div>C. CO₂能为植物提供光能</div><div>D. CO₂能直接杀死害虫</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">CO₂是光合作用的原料之一。白天有光时增施CO₂，原料充足→光合作用增强→制造更多有机物→增产。</div></details>
+</div>
+
+<div class="q">5. 下列关于光合作用与呼吸作用的比较，正确的是？ <span class="kp">[考点：光合vs呼吸·辨析]</span>
+  <div class="options"><div>A. 光合只在白天、呼吸只在夜晚进行</div><div>B. 光合在叶绿体中、呼吸在线粒体中进行</div><div>C. 两者都释放能量</div><div>D. 两者都必须有光才能进行</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">光合场所是叶绿体（需光、储存能量），呼吸场所是线粒体（昼夜不停、释放能量）。A、C、D均错。</div></details>
+</div>
+
+<div class="q">6. 储存粮食时常采用"低温、干燥、降低氧气浓度"的方法。这样做最主要的目的是？ <span class="kp">[考点：呼吸作用·情境应用]</span>
+  <div class="options"><div>A. 促进种子萌发</div><div>B. 增强种子光合作用</div><div>C. 抑制呼吸作用，减少有机物消耗</div><div>D. 杀死所有种子</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">低温、干燥、缺氧都能减弱种子的呼吸作用，少消耗有机物、少放热放水，从而延长储存时间、保持品质。</div></details>
+</div>
+
+<div class="q">7. 番茄果实中红色多汁的"果肉"（可食部分），主要由花的哪一结构发育而来？ <span class="kp">[考点：发育路线]</span>
+  <div class="options"><div>A. 胚珠</div><div>B. 子房壁</div><div>C. 受精卵</div><div>D. 花托</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">子房壁→果皮（含果肉）；胚珠→种子；受精卵→胚。番茄是真果，果肉由子房壁发育而来。</div></details>
+</div>
+
+<div class="q">8. 果农用嫁接繁殖优良苹果品种。下列说法正确的是？ <span class="kp">[考点：无性生殖/嫁接·情境]</span>
+  <div class="options"><div>A. 嫁接属于有性生殖</div><div>B. 嫁接成活的关键是接穗与砧木的形成层紧密结合</div><div>C. 结出果实的性状由砧木（下面的根）决定</div><div>D. 嫁接能增加后代的多样性</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">嫁接不经精卵结合，属无性生殖；成活靠两者形成层贴合、长在一起；果实性状由接穗决定；无性生殖后代保持亲本性状、不增加多样性。</div></details>
+</div>
+
+<div class="q">9. "试管婴儿"技术帮助一些不孕夫妇生育。下列判断正确的是？ <span class="kp">[考点：有性生殖·辨析]</span>
+  <div class="options"><div>A. 属于无性生殖，因为在试管里完成</div><div>B. 属于有性生殖，因为有精子和卵细胞结合</div><div>C. 孩子只继承母亲的性状</div><div>D. 原理与克隆完全相同</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">试管婴儿是把精子和卵细胞在体外受精后再植入子宫，本质仍是精卵结合的有性生殖；克隆不经精卵结合，是无性生殖。</div></details>
+</div>
+
+<div class="q">10. 一对肤色正常的夫妇，生了一个患白化病（隐性性状）的孩子。用 A 表示显性基因、a 表示隐性基因，这对夫妇的基因组成最可能是？ <span class="kp">[考点：显隐性遗传·推断]</span>
+  <div class="options"><div>A. AA 和 AA</div><div>B. Aa 和 Aa</div><div>C. aa 和 aa</div><div>D. AA 和 aa</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">孩子患病（aa），说明父母各传给孩子一个 a；而父母自身肤色正常（表现显性），故都为 Aa。Aa×Aa 才可能生出 aa 的孩子。</div></details>
+</div>
+
+<div class="q">11. 一对夫妇已经生了 3 个女孩，如果再生育，第四胎是男孩的概率约为？ <span class="kp">[考点：性别决定·概率]</span>
+  <div class="options"><div>A. 100%</div><div>B. 75%</div><div>C. 50%</div><div>D. 0%</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">每一胎的性别由父亲提供的精子（含X或Y）随机决定，男女概率各约50%，且与前面已生几胎无关。</div></details>
+</div>
+
+<div class="q">12. 下列现象中，属于可遗传变异的是？ <span class="kp">[考点：变异类型·辨析]</span>
+  <div class="options"><div>A. 长期游泳使人的肩膀变宽</div><div>B. 缺光栽培使韭菜变成黄色（韭黄）</div><div>C. 用射线处理种子选育出抗病新品种</div><div>D. 多施肥使大白菜长得更大</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">射线处理改变了遗传物质（诱变），可遗传给后代；A、B、D都是环境引起、遗传物质没改变，属不可遗传变异。</div></details>
+</div>
+
+<div class="section">二、识图作答题（无图，按文字描述作答；每空3分）</div>
+
+<div class="q">13.（识图·根尖结构）一根幼根的纵剖结构，从尖端往上依次有：①最外面像帽子一样保护幼嫩部分的结构；②细胞小、排列紧密、能不断分裂的部分；③细胞明显变长的部分；④长有大量根毛的部分。<br>
+  写出①~④的名称，并指出根吸收水和无机盐的主要部位是______（填序号）。 <span class="kp">[考点：根尖四区·识图]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">①根冠 ②分生区 ③伸长区 ④成熟区（根毛区）；吸水主要部位是④。</div><div class="sol">成熟区有大量根毛，大大增加了吸收面积，是吸水和吸无机盐的主力部位。</div></details>
+</div>
+
+<div class="q">14.（识图·桃花结构）一朵桃花纵剖：a 位于花最外层、绿色；b 颜色鲜艳；c 由花药和花丝组成；d 位于花中央，顶端是柱头、中间是花柱、基部膨大为子房，子房里有 e。<br>
+  写出 c、d、e 的名称，并说明"传粉"是指花粉落到哪个结构上。 <span class="kp">[考点：花结构·识图]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">c 雄蕊；d 雌蕊；e 胚珠。传粉＝花粉从花药落到雌蕊的柱头上。</div><div class="sol">a 是萼片、b 是花瓣；花的主要部分是雄蕊（c）和雌蕊（d）。胚珠（e）受精后发育成种子。</div></details>
+</div>
+
+<div class="q">15.（识图·遗传层次）一个细胞核里有成对的染色体；把一条染色体放大，是一条双螺旋长链（DNA）；这条长链上又分成一段一段的功能单位。<br>
+  请按"从大到小"写出 细胞核、染色体、DNA、基因 的包含关系，并说明基因是 DNA 上的什么。 <span class="kp">[考点：染色体-DNA-基因·识图]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">细胞核 ＞ 染色体 ＞ DNA ＞ 基因。基因是 DNA 上有遗传效应的片段。</div><div class="sol">细胞核内含染色体，染色体由 DNA 和蛋白质组成，一个 DNA 分子上有许多基因，基因控制生物的性状。</div></details>
+</div>
+
+<div class="q">16.（识图·人类生殖）女性生殖系统示意：①是产生卵细胞、分泌雌性激素的器官；②是连接①和③的细长管道；③是壁厚、能让胎儿发育的器官。<br>
+  写出①②③名称，并指出受精作用发生在______、胎儿通过什么结构与母体交换物质。 <span class="kp">[考点：人类生殖·识图]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">①卵巢 ②输卵管 ③子宫；受精发生在输卵管；胎儿通过胎盘（和脐带）与母体交换物质。</div><div class="sol">受精卵在输卵管形成后移到子宫着床发育。胎盘是物质交换场所，但母子血液并不直接混合。</div></details>
+</div>
+
+<div class="section">三、实验探究题（按"变量—过程—数据—结论"规范作答）</div>
+
+<div class="q">17.（探究·光合作用）用"银边天竺葵"（叶片边缘是白色、中央是绿色）做实验：先把植株放暗处一昼夜，再移到阳光下照射几小时；然后摘下一片叶，放入装有酒精的小烧杯中隔水加热，待叶片变成黄白色后取出、漂洗，滴上碘液观察。<br>
+  （1）实验前"暗处理一昼夜"的目的是______。<br>
+  （2）用酒精隔水加热处理叶片的目的是______。<br>
+  （3）滴碘液后，预期______部分变蓝，______部分不变蓝。<br>
+  （4）由此能得出什么结论？（结论要写出依据） <span class="kp">[考点：光合作用验证实验·过程规范]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（1）把叶片中原有的淀粉运走耗尽，排除干扰。（2）酒精溶解叶绿素，使叶片褪成黄白色，便于碘液显色观察。（3）中央绿色部分变蓝，白色边缘部分不变蓝。（4）因为只有含叶绿体的绿色部分变蓝（生成了淀粉），白色部分不变蓝，所以说明光合作用需要叶绿体（叶绿体是光合作用制造淀粉的场所）。</div><div class="sol">这是"控制变量＋以淀粉遇碘变蓝为检测指标"的经典实验。绿色与白色的唯一区别是有无叶绿体，故能证明叶绿体的作用。结论句式记牢"因为……（现象），所以……（结论）"。</div></details>
+</div>
+
+<div class="q">18.（探究·变量控制）某同学探究"水分对种子萌发的影响"，设置如下：<span class="kp">[考点：对照实验/变量控制·实验探究]</span>
+  <table>
+    <tr><th>组别</th><th>种子数</th><th>温度</th><th>水分</th><th>空气</th></tr>
+    <tr><td>甲</td><td>50 粒</td><td>25℃</td><td>适量</td><td>充足</td></tr>
+    <tr><td>乙</td><td>50 粒</td><td>25℃</td><td>不加水</td><td>充足</td></tr>
+    <tr><td>丙</td><td>5 粒</td><td>0℃</td><td>适量</td><td>充足</td></tr>
+  </table>
+  （1）要探究"水分"的影响，应选哪两组作对照？______<br>
+  （2）丙组不能与甲组对照，原因是______。<br>
+  （3）每组用 50 粒而不是 1 粒种子，目的是______。
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（1）甲和乙（二者只有"水分"一个条件不同）。（2）丙与甲同时有"温度"和"种子数"两个变量不同，不符合单一变量原则，无法说明是哪个因素的作用。（3）减少偶然性，避免因个别种子坏死等造成误差，使实验结果更可靠。</div><div class="sol">对照实验的核心是只设一个变量。甲、乙仅水分不同，故是探究水分的正确对照。</div></details>
+</div>
+
+<div class="q">19.（探究·数据处理·压轴）测同一盆绿色植物在不同光照强度下，每小时气体变化（用"O₂相对值"表示，正值＝净放出O₂，负值＝净吸收O₂），数据如下： <span class="kp">[考点：光合作用与呼吸作用·数据分析]</span>
+  <table>
+    <tr><th>光照强度(klx)</th><td>0</td><td>2</td><td>4</td><td>6</td><td>8</td></tr>
+    <tr><th>O₂相对值</th><td>−2</td><td>1</td><td>4</td><td>6</td><td>6</td></tr>
+  </table>
+  （1）光照为 0 时 O₂为−2（净吸收氧气），说明此时植物只进行______作用。<br>
+  （2）从 2 klx 到 6 klx，随光照增强，光合作用如何变化？______<br>
+  （3）从 6 klx 到 8 klx，O₂相对值不再增加，可能的限制因素是______（写出一个）。
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（1）呼吸（无光不能光合，只有呼吸消耗O₂）。（2）随光照增强，光合作用逐渐增强（净放出O₂越来越多）。（3）二氧化碳浓度（或温度）等成为限制因素。</div><div class="sol">0时净吸氧＝只呼吸；光越强光合越旺到6klx达到较高水平；再增光不再上升，说明光已不是限制因素，改由CO₂浓度（或温度）限制。注意：测到的O₂相对值是"光合－呼吸"的净结果。</div></details>
+</div>
+
+<div class="q">20.（探究·误差与改进·压轴）用两段相同的带茎枝条做蒸腾实验：A 枝保留全部叶片，B 枝去掉全部叶片，分别插入装有等量清水的量筒中，并在水面滴一层植物油。放在相同环境一段时间后，A 筒水位明显下降，B 筒几乎不变。 <span class="kp">[考点：蒸腾作用实验·误差分析与改进]</span><br>
+  （1）水面滴一层油的作用是______。<br>
+  （2）设置 B 组（去叶）在实验中起______作用。<br>
+  （3）有同学说"A 筒减少的水量就等于叶片蒸腾掉的水量"，这种说法严谨吗？请判断并说明，并提出一点改进。
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（1）防止量筒里的水直接蒸发，保证减少的水都是被植物吸收/散失的。（2）对照作用，用来排除茎等叶片以外部位散失水分的影响。（3）不严谨：植物吸收的水有一小部分用于自身生命活动（如光合作用、组成细胞），并非全部蒸腾散失；而且茎也会散失少量水。改进：用 A、B 两筒水位下降量的差值来近似代表"叶片蒸腾的水量"，结果更准确。</div><div class="sol">这是"误差来源＋改进"型探究题：吸水量≈蒸腾量但不完全相等，B组（去叶）正是用来扣除非叶片因素的对照。</div></details>
+</div>
+
+<div class="section">四、真实情境分析题（先读信息，再用知识作答）</div>
+
+<div class="q">21.（情境·农业）农谚说"正其行，通其风"，意思是庄稼要按合理的行距、株距种植。请从光合作用的角度解释：为什么"合理密植"（不过密也不过稀）能提高产量？ <span class="kp">[考点：光合作用·情境应用]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">合理密植能让叶片充分接受光照、通风又能保证CO₂供应，使群体的光合作用充分进行、制造更多有机物，从而提高产量。若种得过密，下层叶片被遮光、CO₂不足，光合下降，反而减产；过稀又浪费光和地。</div><div class="sol">关键是"光照＋CO₂供应"两个光合条件都要满足，密度要恰当。</div></details>
+</div>
+
+<div class="q">22.（情境·生态/园艺）某花卉基地用扦插和组织培养的方法，大量繁殖一种名贵兰花。<br>
+  （1）这种繁殖方式属于______生殖。<br>
+  （2）与用种子繁殖相比，这种方式有什么优点？（答一点即可） <span class="kp">[考点：无性生殖·情境]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（1）无性生殖。（2）能保持母本（亲本）的优良性状、后代整齐一致，且繁殖速度快、数量多。</div><div class="sol">扦插、组织培养都不经精卵结合，后代由母体体细胞发育而来，因此能"原样复制"优良性状。</div></details>
+</div>
+
+<div class="q">23.（情境·健康）进入青春期后，小雨发现自己长高很快，身边同学也出现了一些身体变化。<br>
+  （1）"身高突然加快增长"是不是第二性征？______<br>
+  （2）女生出现月经、男生出现遗精，是否正常？应该怎样科学看待这些变化？ <span class="kp">[考点：青春期·健康·情境]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（1）不是。第二性征指除生殖器官以外的男女性别特征（如男生长胡须/喉结突出、女生乳房发育等），身高突增不属于第二性征。（2）都是正常的生理现象，是生殖器官发育成熟的表现，应坦然、科学地对待，注意个人卫生，不必紧张或羞愧。</div><div class="sol">身高突增是青春期普遍的形态变化，但不归类为第二性征；月经、遗精的正常化认识属于健康教育内容。</div></details>
+</div>
+
+<div class="q">24.（情境·育种·综合）我国科学家把辣椒种子带上太空，让它受到宇宙射线等影响而发生变异，返回地面后再从中选育出果实大、品质好的"航天椒"新品种。<br>
+  （1）航天椒发生的变异属于可遗传变异还是不可遗传变异？为什么？<br>
+  （2）这种育种方法叫______育种。<br>
+  （3）若把航天椒种在贫瘠的土地里，长得又矮又小，这种"矮小"会遗传给后代吗？为什么？ <span class="kp">[考点：变异/育种·综合分析]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">（1）可遗传变异。因为宇宙射线等使种子内的遗传物质（基因）发生了改变，这种改变能遗传给后代。（2）诱变育种。（3）不会。"矮小"是贫瘠土壤（环境）引起的，遗传物质并没有改变，属于不可遗传变异，所以不会遗传给后代。</div><div class="sol">判断变异能否遗传，关键看"遗传物质有没有改变"：航天诱变改了基因→可遗传；环境贫瘠致矮小→基因未变→不可遗传。</div></details>
+</div>
+
+</div>
+</body>
+</html>

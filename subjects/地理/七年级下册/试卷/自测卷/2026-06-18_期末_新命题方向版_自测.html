@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--
+  地理七下 · 期末 · 新命题方向版（2026 素养+情境+读图）自测卷
+  复用 templates/试卷模板.html 骨架；缺图题一律用文字把方位/经纬度/数据讲清。
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>地理 · 七年级下册 · 期末（新命题方向版）</title>
+<style>
+  :root { --ink:#1f2937; --line:#d1d5db; --soft:#6b7280; --brand:#2563eb; --warn:#b45309; --ok:#047857; }
+  * { box-sizing: border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+         color:var(--ink); max-width:860px; margin:24px auto; padding:0 20px; line-height:1.85; font-size:15px; }
+  header { border-bottom:2px solid var(--ink); padding-bottom:12px; margin-bottom:8px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  h2 { font-size:18px; color:var(--brand); margin:28px 0 10px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  h3 { font-size:16px; margin:18px 0 8px; }
+  .meta { color:var(--soft); font-size:14px; }
+  .tip  { background:#eff6ff; border-left:4px solid var(--brand); padding:8px 12px; font-size:14px; color:#1e40af; margin:14px 0; border-radius:4px; }
+  .warn { background:#fffbeb; border-left:4px solid var(--warn);  padding:8px 12px; font-size:14px; color:#92400e; margin:14px 0; border-radius:4px; }
+  .mat  { background:#f0fdf4; border-left:4px solid var(--ok); padding:8px 12px; font-size:14px; color:#14532d; margin:14px 0; border-radius:4px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 16px; font-size:14px; }
+  th,td { border:1px solid var(--line); padding:6px 10px; text-align:left; vertical-align:top; }
+  th { background:#f3f4f6; font-weight:600; }
+  ul { margin:6px 0; padding-left:22px; } li { margin:3px 0; }
+  .section { font-weight:700; font-size:17px; margin:22px 0 10px; color:var(--brand); }
+  .q { margin:16px 0; }
+  .kp { font-size:12px; color:var(--soft); }
+  .options div { margin:3px 0 3px 16px; }
+  .fill { border-bottom:1px solid var(--ink); display:inline-block; min-width:100px; }
+  .answerline { border-bottom:1px solid var(--line); height:28px; margin-top:8px; }
+  details { margin-top:8px; background:#f9fafb; border:1px solid var(--line); border-radius:6px; padding:6px 12px; }
+  summary { cursor:pointer; color:var(--brand); font-size:14px; font-weight:600; }
+  .ans { color:var(--ok); font-weight:600; }
+  .sol { font-size:14px; margin-top:4px; }
+  .toolbar { text-align:right; margin:10px 0; position:sticky; top:0; background:#fff; padding:8px 0; z-index:10; }
+  button { background:var(--brand); color:#fff; border:0; padding:6px 14px; border-radius:6px; cursor:pointer; font-size:14px; margin-left:6px; }
+  .pagebreak { page-break-before:always; margin-top:40px; padding-top:20px; border-top:3px double var(--ink); }
+  @media print {
+    .toolbar { display:none; } .no-print-tip { display:none; }
+    details { border:none; background:none; }
+    details:not([open]) summary { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== 上半部：复习资料（方法卡，主打读图与判读规范） ========== -->
+<header>
+  <h1>地理 · 七年级下册 · 期末复习资料（新命题方向版）</h1>
+  <div class="meta">人教版2024 · 小雨 · 2026-06-18 · ★八年级会考科目 · 素养+情境+读图</div>
+</header>
+
+<div class="tip no-print-tip">📌 用法：先把下面三张"方法卡"练熟（会考拿分全靠它们）→ 再做自测卷。本卷主打<strong>真实情境 + 读图判读 + 写步骤用术语</strong>，少考死记硬背。带 ⚠️ 处开学对课本核对。</div>
+
+<h2>方法卡①　气候判读三步（最高频考法）</h2>
+<table>
+  <tr><th>步骤</th><th>看什么</th><th>怎么判</th></tr>
+  <tr><td>第1步 看气温</td><td>最冷月气温 + 最热月在几月</td><td>最冷月 &gt;15℃→热带；0~15℃→亚热带；&lt;0℃→温带（⚠️粗略分界，以教材为准）。最热月在<strong>7月</strong>→北半球，在<strong>1月</strong>→南半球。</td></tr>
+  <tr><td>第2步 看降水</td><td>年总量 + 雨季在何时</td><td>夏季多雨→季风气候；冬季多雨夏季干→地中海气候；全年多雨→热带雨林；全年很少→沙漠。</td></tr>
+  <tr><td>第3步 下结论</td><td>把温度带 + 降水型拼起来</td><td>如"最冷月&lt;0℃ + 夏雨"=<strong>温带季风气候</strong>，用术语写全名。</td></tr>
+</table>
+
+<h2>方法卡②　读图三步（任何专题图通用）</h2>
+<ul>
+  <li><strong>第1步</strong>：先看<strong>图名 / 图例 / 经纬度</strong>——这是什么图、范围在哪。</li>
+  <li><strong>第2步</strong>：<strong>提取关键信息</strong>——位置、数据、分布规律（如"工业沿海""石油在波斯湾"）。</li>
+  <li><strong>第3步</strong>：<strong>结合所学下结论</strong>，用<strong>地理术语</strong>作答，不要用大白话。</li>
+</ul>
+
+<h2>方法卡③　区域分析框架（答区域大题套这条线）</h2>
+<div class="tip">位置（半球/纬度带/海陆）→ 地形 → 气候 → 河流/资源 → 人文（农业/工业/人口/城市）→ 问题与人地协调。哪问哪答，不漏不串。</div>
+
+<h2>期末猜题（高频考点预测，非真题）</h2>
+<div class="warn">⚠️ 以下是结合会考核心、易错点与"情境+读图"命题趋势的<strong>考点预测，不是真题</strong>，帮你把复习重点压到最可能考处。</div>
+<table>
+  <tr><th>#</th><th>预测考点</th><th>可能题型</th></tr>
+  <tr><td>1</td><td>气温降水图判读气候类型（含定半球）</td><td>读图判读</td></tr>
+  <tr><td>2</td><td>马六甲海峡位置与"十字路口"作用（本土进口情境）</td><td>情境读图</td></tr>
+  <tr><td>3</td><td>日本多火山地震成因（板块，跨学科）</td><td>读图+成因分析</td></tr>
+  <tr><td>4</td><td>全球变暖对北极地区的影响（人地协调）</td><td>材料分析</td></tr>
+  <tr><td>5</td><td>巴西雨林开发与保护的平衡（全球热点）</td><td>综合分析</td></tr>
+  <tr><td>6</td><td>西亚石油外运航线与缺水成因（资源+气候）</td><td>读图综合</td></tr>
+</table>
+
+<!-- ========== 下半部：自测卷 ========== -->
+<div class="pagebreak">
+<header>
+  <h1>地理七下 · 期末自测卷（新命题方向版）</h1>
+  <div class="meta">
+    <span>姓名：<span class="fill">小雨</span></span>
+    <span>科目：地理</span>
+    <span>范围：七年级下册全册（第七～十一章）</span>
+    <span>日期：2026-06-18</span>
+    <span>测试类型：期末自测</span>
+    <span>用时：<span class="fill"></span>分钟</span>
+    <span>建议限时：50分钟</span>
+    <span>难度配比：基础70% · 中档20% · 压轴10%（等级科 7:2:1）</span>
+  </div>
+</header>
+<div class="tip">不计分，是学习工具。读图题已把图的关键信息（方位、经纬度、数据）用文字讲清，<strong>先按"方法卡"独立做完、综合题要写步骤用术语</strong>，再点"显示全部答案"对照。</div>
+<div class="toolbar">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">显示全部答案</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">隐藏全部答案</button>
+</div>
+
+<!-- ===== 选择题（情境/读图判读） ===== -->
+<div class="section">一、选择题（每题3分，共12题）</div>
+
+<div class="mat">【材料一·济南本土】济南某超市的进口区里，泰国香米、马来西亚棕榈油、印度尼西亚咖啡很受欢迎，它们多经海运到我国。<br>
+<strong>东南亚位置（文字版示意图）</strong>：东南亚由<strong>中南半岛</strong>（与我国相连）和<strong>马来群岛</strong>组成；<strong>赤道（0°）</strong>横穿马来群岛中部；<strong>马六甲海峡</strong>位于<strong>马来半岛与苏门答腊岛之间</strong>，西连印度洋（安达曼海）、东接太平洋（南海）。</div>
+
+<div class="q">1. 据材料，马来群岛大部分位于赤道附近，其主要气候类型及特征最可能是 <span class="kp">[考点：东南亚气候判读]</span>
+  <div class="options"><div>A. 温带季风——夏雨冬雪</div><div>B. 热带雨林——全年高温多雨</div><div>C. 地中海气候——夏干冬雨</div><div>D. 热带沙漠——终年炎热干燥</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">读图第1步看位置：赤道横穿→热带；第2步：赤道附近终年受热、降水多→热带雨林气候，全年高温多雨。这也是当地盛产棕榈、咖啡等热带作物的原因。</div></details>
+</div>
+
+<div class="q">2. 这些东南亚商品经海运到我国，最可能经过的"海上十字路口"咽喉是 <span class="kp">[考点：马六甲海峡位置·读图]</span>
+  <div class="options"><div>A. 苏伊士运河</div><div>B. 巴拿马运河</div><div>C. 马六甲海峡</div><div>D. 直布罗陀海峡</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">材料明确马六甲海峡在马来半岛与苏门答腊岛之间、沟通印度洋与太平洋，是东南亚到我国海运的咽喉。苏伊士、巴拿马是运河且不在此区。</div></details>
+</div>
+
+<div class="q">3. 小雨推断："这些都是热带经济作物，说明当地气候适合它们生长。"她用的地理思路是 <span class="kp">[考点：气候→农业 迁移应用]</span>
+  <div class="options"><div>A. 由人口推气候</div><div>B. 由气候推农业（物产）</div><div>C. 由地形推河流</div><div>D. 由资源推工业</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">"先定气候类型→再推农业物产"是区域分析的常用链条：热带气候→热带经济作物。这就是用气候去解释农业。</div></details>
+</div>
+
+<div class="mat">【材料二·气温降水图（文字版）】济南某中学记录的本地某测站全年数据：最热月在<strong>7月</strong>，月均温约<strong>27℃</strong>；最冷月在<strong>1月</strong>，月均温约<strong>−1℃</strong>；全年降水集中在<strong>7—8月</strong>（夏季多、冬季少）。⚠️数据为复习用约值，以教材气候图为准。</div>
+
+<div class="q">4. 据"气候判读三步"，由"最热月在7月"可先判断该地位于 <span class="kp">[考点：气温曲线定南北半球·读图判读]</span>
+  <div class="options"><div>A. 南半球</div><div>B. 北半球</div><div>C. 赤道上</div><div>D. 无法判断</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">最热月在7月（北半球夏季）→北半球；若最热月在1月才是南半球。这是判读第1步"看气温"里的定半球。</div></details>
+</div>
+
+<div class="q">5. 该测站最冷月约−1℃（&lt;0℃）、夏季多雨，其气候类型应判读为 <span class="kp">[考点：温带季风气候判读]</span>
+  <div class="options"><div>A. 亚热带季风气候</div><div>B. 温带季风气候</div><div>C. 温带海洋性气候</div><div>D. 热带季风气候</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">第1步气温：最冷月&lt;0℃→温带；第2步降水：夏季多雨→季风；第3步结论：温带季风气候。温带海洋性是全年湿润、冬不冷夏不热，不符。</div></details>
+</div>
+
+<div class="q">6. 下列地区中，气候特征与材料二最接近的是 <span class="kp">[考点：气候类型与区域对应·迁移]</span>
+  <div class="options"><div>A. 欧洲西部沿海</div><div>B. 西亚阿拉伯半岛</div><div>C. 我国华北（如济南所在）</div><div>D. 巴西亚马孙平原</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">温带季风气候分布在我国北方（华北、东北南部等），济南即属此类。欧洲西部是温带海洋性、西亚是热带沙漠、亚马孙是热带雨林。</div></details>
+</div>
+
+<div class="mat">【材料三·西亚与能源】我国部分进口石油来自西亚。<strong>西亚位置（文字版）</strong>：地处"<strong>五海三洲</strong>"——周围有里海、黑海、地中海、红海、阿拉伯海，又是<strong>亚、非、欧</strong>三洲交界；石油主要分布在<strong>波斯湾及其沿岸</strong>。该地区大部分为<strong>热带沙漠气候</strong>，终年炎热干燥、河流稀少。</div>
+
+<div class="q">7. 西亚"三洲"指的是 <span class="kp">[考点：西亚位置·读图]</span>
+  <div class="options"><div>A. 亚洲、欧洲、北美洲</div><div>B. 亚洲、非洲、欧洲</div><div>C. 亚洲、非洲、大洋洲</div><div>D. 欧洲、非洲、南美洲</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">"五海三洲"之"三洲"=亚、非、欧交界，这是西亚交通与战略地位重要的原因。</div></details>
+</div>
+
+<div class="q">8. 西亚石油经海运到我国，多走"波斯湾→印度洋→马六甲海峡→南海"路线。这反映西亚石油外运的特点是 <span class="kp">[考点：石油外运·读图分析]</span>
+  <div class="options"><div>A. 主要靠铁路</div><div>B. 主要靠海洋运输，航线长</div><div>C. 主要靠航空</div><div>D. 就近自给不外运</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">石油是大宗货物，长距离外运以海运为主、航线漫长，马六甲海峡是必经咽喉之一，因此该海峡对我国能源安全很重要。</div></details>
+</div>
+
+<div class="q">9. 西亚许多国家严重缺水，从气候角度看根本原因是 <span class="kp">[考点：西亚缺水成因·为什么]</span>
+  <div class="options"><div>A. 人口太多</div><div>B. 热带沙漠气候，终年炎热干燥、降水少</div><div>C. 石油开采用水太多</div><div>D. 地势太高</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">问"根本原因"要追到气候：热带沙漠气候降水稀少、蒸发旺盛，河流湖泊少，所以水比油贵。这是"成因"型设问，不是记结论。</div></details>
+</div>
+
+<div class="mat">【材料四·两极与全球变暖（跨学科·生物）】科学家观测发现，近几十年北极地区海冰范围缩小，北极熊捕食海豹的浮冰平台减少，部分种群觅食困难。南极地区则是企鹅的家园。</div>
+
+<div class="q">10. 材料中两极的代表动物对应正确的是 <span class="kp">[考点：极地代表动物]</span>
+  <div class="options"><div>A. 北极——企鹅，南极——北极熊</div><div>B. 北极——北极熊，南极——企鹅</div><div>C. 两极都是企鹅</div><div>D. 两极都是北极熊</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">北极熊在北极、企鹅在南极，千万别搞反——这是送分的"入场券"。</div></details>
+</div>
+
+<div class="q">11. 我国科考队赴<strong>南极</strong>大规模考察，最适宜的时段一般是 <span class="kp">[考点：南极暖季·读图判读]</span>
+  <div class="options"><div>A. 北半球的7—8月</div><div>B. 北半球的11月—次年3月</div><div>C. 全年随便</div><div>D. 只能在4—5月</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">南极的暖季（极昼、相对温暖）在北半球冬季，即11月—次年3月，此时去考察更安全。别用济南的季节去推。</div></details>
+</div>
+
+<div class="q">12. 据材料，北极海冰减少使北极熊觅食困难。这最能说明 <span class="kp">[考点：全球变暖·人地协调·跨学科]</span>
+  <div class="options"><div>A. 气候变化会影响生物的生存环境</div><div>B. 北极熊不会游泳</div><div>C. 南极比北极冷</div><div>D. 海冰多少与气候无关</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">海冰是北极熊捕食的平台，全球变暖→海冰减少→栖息地与食物受影响。体现"人类活动—气候—生物"的人地关系，提醒我们减排、保护极地。</div></details>
+</div>
+
+<!-- ===== 填空 / 读图判读 ===== -->
+<div class="section">二、填空 / 读图判读题（每空3分）</div>
+
+<div class="q">13. <strong>读"亚洲地形（文字版）"</strong>：亚洲地势<strong>中部高、四周低</strong>，许多大河发源于中部高原山地。据此判断：亚洲的河流大多呈______状流向四周（填"放射"或"向心"）；这种流向是由______决定的（填地理要素）。 <span class="kp">[考点：亚洲地势→河流·图文转换]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">放射；地势（地形）</div><div class="sol">地势中部高四周低→水往低处流→从中部向四周呈放射状。"地势决定河流流向"是常用因果链。</div></details>
+</div>
+
+<div class="q">14. <strong>读"日本工业分布（文字版）"</strong>：日本资源贫乏，工业原料和燃料大量进口、产品大量出口，工业主要集中在______沿岸（填海域）。这种工业类型称为______型经济。 <span class="kp">[考点：日本工业分布·读图判读]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">太平洋；加工贸易</div><div class="sol">沿太平洋一侧多优良港湾，便于"进口原料—加工—出口产品"，所以工业沿太平洋沿岸集中。</div></details>
+</div>
+
+<div class="q">15. 印度水旱灾害频繁。给印度带来雨季的是______季风（填风向）；而水旱灾害多，是因为该季风强弱不定、______（填两字，描述其特点）。 <span class="kp">[考点：印度季风与灾害·成因]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">西南；不稳定</div><div class="sol">西南季风从印度洋吹来带来雨季；季风来得早/晚、强/弱不稳定→雨多则涝、雨少则旱。</div></details>
+</div>
+
+<div class="q">16. <strong>读"美国农业带（文字版）"</strong>：美国不同地区根据自然与市场条件，分别集中发展玉米、小麦、乳畜等，形成"玉米带""乳畜带"等。这种"一个地区主要发展一两种农业"的现象，叫农业的______化。它体现了______（填"因地制宜"或"广种薄收"）的思想。 <span class="kp">[考点：美国农业·地区专业化·读图]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">地区专业（化）；因地制宜</div><div class="sol">按各地自然条件安排最合适的农业并规模化生产=地区专业化，是"因地制宜"的典型。</div></details>
+</div>
+
+<div class="q">17.（数学跨学科·图文转换）在一幅亚洲政区图上，量得甲、乙两城之间的图上距离为<strong>3厘米</strong>，该图比例尺为<strong>1:30 000 000</strong>。则甲乙两地实地直线距离约为______千米。（写出换算：实地距离=图上距离÷比例尺） <span class="kp">[考点：比例尺计算·跨学科]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">900 千米</div><div class="sol">实地距离=3 cm × 30 000 000 = 90 000 000 cm；单位换算：90 000 000 cm ÷ 100 000（1 km=100 000 cm）= 900 km。读图时务必先看比例尺再估距离。</div></details>
+</div>
+
+<div class="q">18. 欧洲西部畜牧业发达。从气候看，这里以______气候为主，全年温和湿润、利于多汁牧草生长；它和地中海气候最大的不同是降水<strong>季节</strong>不同——地中海气候是______（填"夏干冬雨"或"夏雨冬干"）。 <span class="kp">[考点：欧洲西部气候→畜牧·对比]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">温带海洋性；夏干冬雨</div><div class="sol">温带海洋性全年湿润→牧草旺→畜牧业发达；地中海气候"夏干冬雨"，与季风的"雨热同期"也不同，别混。</div></details>
+</div>
+
+<!-- ===== 读图作答 / 综合分析（写步骤用术语） ===== -->
+<div class="section">三、读图作答 / 综合分析题（要写步骤、用地理术语，共6题）</div>
+
+<div class="q">19.（8分·气候判读规范题）某测站资料：最热月在<strong>1月</strong>、月均温约<strong>24℃</strong>；最冷月在<strong>7月</strong>、月均温约<strong>12℃</strong>；降水集中在<strong>5—9月之外</strong>的冬半年（即当地冬季多雨、夏季少雨）。请<strong>按"气候判读三步"</strong>写出判读过程并得出气候类型。 <span class="kp">[考点：气候判读流程·过程规范]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">气候类型：地中海气候（南半球）。</div><div class="sol">第1步看气温：最热月在1月→<strong>南半球</strong>；最冷月约12℃（&gt;0℃且较温和）→<strong>亚热带</strong>。第2步看降水：当地冬季（南半球6—8月）多雨、夏季干→<strong>冬雨夏干</strong>。第3步下结论：亚热带 + 冬雨夏干 = <strong>地中海气候</strong>。规范作答要把"先定半球→再定温度带→再看雨季"的步骤写出来。</div></details>
+</div>
+
+<div class="q">20.（10分·跨学科：地质/物理）日本是世界上多火山、地震的国家。<br>(1) 从板块运动角度，说明日本多火山地震的原因；<br>(2) 列举日本人应对地震的<strong>一条</strong>做法。请<strong>先说原因再说做法</strong>，用地理术语。 <span class="kp">[考点：日本火山地震成因·跨学科·过程规范]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">(1) 日本位于<strong>太平洋板块与亚欧板块交界处</strong>，地壳运动活跃，岩层受挤压易断裂，故多火山、地震。(2) 如：建抗震房屋／常做防震演练／普及防震知识（任答一条）。</div><div class="sol">成因要落到"板块交界、地壳活跃"这一术语链；联系物理上"力使岩层挤压断裂"。答案分(1)(2)两步、先因后策，体现过程规范。</div></details>
+</div>
+
+<div class="q">21.（12分·压轴·综合）印度软件外包（服务外包）产业发达，被称为"世界办公室"。结合所学，从<strong>语言、人才、时差</strong>等角度，分析印度发展软件外包的<strong>两条</strong>有利条件。 <span class="kp">[考点：印度服务外包区位分析·高阶综合]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">任答两条，言之有据即可：①英语普及，便于承接欧美业务（语言优势）；②人才多、劳动力成本较低（人才/成本优势）；③与欧美存在时差，可"接力"工作、提高效率（时差优势）。</div><div class="sol">这是"区位条件分析"型高阶题：按给定角度逐条作答，每条"条件+为什么有利"。⚠️以教材表述为准，别凭印象编数据。</div></details>
+</div>
+
+<div class="q">22.（12分·压轴·人地协调·全球热点）巴西亚马孙热带雨林被称为"地球之肺"，但近年因开荒、采矿等遭到破坏。<br>(1) 说明保护亚马孙雨林的<strong>两点</strong>生态意义；<br>(2) 有人主张"全部禁止开发"，有人主张"放开开发赚钱"，请你<strong>谈谈如何平衡开发与保护</strong>（人地协调）。 <span class="kp">[考点：雨林开发与保护·人地协调·过程规范]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">(1) ①调节全球气候、吸收二氧化碳释放氧气（"地球之肺"）；②维护生物多样性（众多动植物栖息地）。（还可答：涵养水源、保持水土。）(2) 不能只砍或只禁，应<strong>适度、可持续</strong>利用：如发展生态旅游、退耕还林、立法限制乱砍滥伐，在保护前提下合理发展经济。</div><div class="sol">(1)答"生态意义"不要只写"树多好看"。(2)是开放题，要点是"<strong>开发与保护协调、可持续发展</strong>"，给出具体做法即可，体现人地协调观。</div></details>
+</div>
+
+<div class="q">23.（8分·济南本土·综合）济南某物流公司同时进口"西亚石油"和"俄罗斯木材、天然气"。<br>(1) 西亚石油集中分布在______及其沿岸；<br>(2) 俄罗斯资源丰富，其国内货物运输以______为主（填交通方式）；<br>(3) 用一句话说明：为什么我国要从多个不同地区进口能源资源？ <span class="kp">[考点：西亚石油+俄罗斯交通+资源安全·情境综合]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">(1) 波斯湾；(2) 铁路；(3) 进口来源多元化可分散风险、保障能源供应安全（言之成理即可）。</div><div class="sol">(1)(2)是定位与基础事实；(3)是高阶迁移：把"五海三洲/波斯湾石油""俄罗斯铁路运输"等知识用到"能源安全"这一真实问题上。</div></details>
+</div>
+
+<div class="q">24.（10分·对比·读图作答）请把南极地区与北极地区的差异填入下表，并回答：为什么去南极和去北极科考的<strong>季节相反</strong>？ <span class="kp">[考点：两极对比+成因·图文转换·过程规范]</span>
+  <table>
+    <tr><th>对比项</th><th>南极地区</th><th>北极地区</th></tr>
+    <tr><td>代表动物</td><td>______</td><td>______</td></tr>
+    <tr><td>地表（陆/海为主）</td><td>______</td><td>______</td></tr>
+    <tr><td>科考适宜季节</td><td>______</td><td>______</td></tr>
+  </table>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">代表动物：企鹅 / 北极熊；地表：陆地（冰雪覆盖）为主 / 海洋为主；科考季节：11月—次年3月 / 北半球夏季。<br>季节相反的原因：南北半球季节相反，科考要选当地的<strong>暖季（极昼期）</strong>——南极暖季在北半球冬季，北极暖季在北半球夏季，所以两者科考季节正好相反。</div><div class="sol">先把对比表逐格填准（用术语），再用"南北半球季节相反 + 都选当地暖季"两点把成因说清，这就是规范的对比+成因作答。</div></details>
+</div>
+
+</div>
+</body>
+</html>
