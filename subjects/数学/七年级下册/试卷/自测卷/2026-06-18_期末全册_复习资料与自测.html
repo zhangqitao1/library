@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数学七下 · 期末复习资料 + 自测卷</title>
+<style>
+  :root { --ink:#1f2937; --line:#d1d5db; --soft:#6b7280; --brand:#2563eb; --warn:#b45309; }
+  * { box-sizing: border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+         color:var(--ink); max-width:860px; margin:24px auto; padding:0 20px; line-height:1.85; font-size:15px; }
+  header { border-bottom:2px solid var(--ink); padding-bottom:12px; margin-bottom:8px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  h2 { font-size:18px; color:var(--brand); margin:28px 0 10px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  h3 { font-size:16px; margin:18px 0 8px; }
+  .meta { color:var(--soft); font-size:14px; }
+  .tip { background:#eff6ff; border-left:4px solid var(--brand); padding:8px 12px; font-size:14px; color:#1e40af; margin:14px 0; border-radius:4px; }
+  .warn { background:#fffbeb; border-left:4px solid var(--warn); padding:8px 12px; font-size:14px; color:#92400e; margin:14px 0; border-radius:4px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 16px; font-size:14px; }
+  th,td { border:1px solid var(--line); padding:6px 10px; text-align:left; vertical-align:top; }
+  th { background:#f3f4f6; font-weight:600; }
+  ul { margin:6px 0; padding-left:22px; }
+  li { margin:3px 0; }
+  .section { font-weight:700; font-size:17px; margin:22px 0 10px; color:var(--brand); }
+  .q { margin:16px 0; }
+  .kp { font-size:12px; color:var(--soft); }
+  .options div { margin:3px 0 3px 16px; }
+  .fill { border-bottom:1px solid var(--ink); display:inline-block; min-width:100px; }
+  .answerline { border-bottom:1px solid var(--line); height:28px; margin-top:8px; }
+  details { margin-top:8px; background:#f9fafb; border:1px solid var(--line); border-radius:6px; padding:6px 12px; }
+  summary { cursor:pointer; color:var(--brand); font-size:14px; font-weight:600; }
+  .ans { color:#047857; font-weight:600; }
+  .sol { font-size:14px; margin-top:4px; }
+  .toolbar { text-align:right; margin:10px 0; position:sticky; top:0; background:#fff; padding:8px 0; z-index:10; }
+  button { background:var(--brand); color:#fff; border:0; padding:6px 14px; border-radius:6px; cursor:pointer; font-size:14px; margin-left:6px; }
+  .pagebreak { page-break-before:always; margin-top:40px; padding-top:20px; border-top:3px double var(--ink); }
+  @media print { .toolbar { display:none; } .no-print-tip { display:none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>数学 · 七年级下册 · 期末复习资料</h1>
+  <div class="meta">北师大版 · 小雨 · 2026-06-18 · 全六章</div>
+</header>
+
+<div class="tip no-print-tip">📌 用法：先通读上半部分复习资料 → 合上书默背公式表格 → 再做下半部分自测卷（不计分）。导图见 <code>思维导图/</code> 下各章文件。</div>
+
+<!-- ========== 复习资料 ========== -->
+
+<h2>一、第一章 整式的乘除（计算头号章）</h2>
+<h3>1.1 幂的运算法则（★必背，先判类型再动手）</h3>
+<table>
+  <tr><th>运算</th><th>口诀</th><th>公式</th><th>例子</th></tr>
+  <tr><td>同底数幂乘法</td><td>底不变，指数<strong>相加</strong></td><td>a<sup>m</sup>·a<sup>n</sup>=a<sup>m+n</sup></td><td>a<sup>3</sup>·a<sup>2</sup>=a<sup>5</sup></td></tr>
+  <tr><td>幂的乘方</td><td>底不变，指数<strong>相乘</strong></td><td>(a<sup>m</sup>)<sup>n</sup>=a<sup>mn</sup></td><td>(a<sup>3</sup>)<sup>2</sup>=a<sup>6</sup></td></tr>
+  <tr><td>积的乘方</td><td>每个因式<strong>各自</strong>乘方</td><td>(ab)<sup>n</sup>=a<sup>n</sup>b<sup>n</sup></td><td>(2x)<sup>3</sup>=8x<sup>3</sup></td></tr>
+  <tr><td>同底数幂除法</td><td>底不变，指数<strong>相减</strong></td><td>a<sup>m</sup>÷a<sup>n</sup>=a<sup>m−n</sup></td><td>a<sup>5</sup>÷a<sup>2</sup>=a<sup>3</sup></td></tr>
+  <tr><td>零指数幂</td><td>非零数的零次=1</td><td>a<sup>0</sup>=1（a≠0）</td><td>5<sup>0</sup>=1</td></tr>
+  <tr><td>负整数指数幂</td><td>变<strong>倒数</strong>再转正</td><td>a<sup>−n</sup>=1/a<sup>n</sup>（a≠0）</td><td>2<sup>−2</sup>=1/4</td></tr>
+</table>
+<div class="warn">⚠️ 头号坑：同底数幂乘法是指数<strong>相加</strong>，幂的乘方是指数<strong>相乘</strong>，千万别混！底数不同（如 2<sup>3</sup>·4<sup>2</sup>）要先化成同底（4=2<sup>2</sup>）。</div>
+
+<h3>1.2 整式的乘除</h3>
+<ul>
+  <li><strong>单项式×单项式</strong>：系数×系数，同字母指数相加。</li>
+  <li><strong>单项式×多项式</strong>：分配律，单项式乘多项式的<strong>每一项</strong>。</li>
+  <li><strong>多项式×多项式</strong>：逐项相乘再合并，<strong>别漏项</strong>，如 (x+1)(x+2) 应得 4 项。</li>
+  <li><strong>单项式÷单项式</strong>：系数相除，同字母指数相减。</li>
+  <li><strong>多项式÷单项式</strong>：每一项都要除。</li>
+</ul>
+
+<h3>1.3 乘法公式（★期末必考）</h3>
+<table>
+  <tr><th>公式名</th><th>公式</th><th>记忆要点</th></tr>
+  <tr><td>平方差</td><td>(a+b)(a−b)=a<sup>2</sup>−b<sup>2</sup></td><td>"和×差"才用；结果只有两项</td></tr>
+  <tr><td>完全平方（和）</td><td>(a+b)<sup>2</sup>=a<sup>2</sup>+2ab+b<sup>2</sup></td><td>首<sup>2</sup>+2·首·尾+尾<sup>2</sup></td></tr>
+  <tr><td>完全平方（差）</td><td>(a−b)<sup>2</sup>=a<sup>2</sup>−2ab+b<sup>2</sup></td><td>中间一项是 −2ab</td></tr>
+</table>
+<div class="warn">⚠️ 全章头号错：(a+b)<sup>2</sup> ≠ a<sup>2</sup>+b<sup>2</sup>，<strong>中间必须有 ±2ab</strong>！平方要带括号：(3x)<sup>2</sup>=9x<sup>2</sup>，不是 3x<sup>2</sup>。</div>
+<div class="tip">📎 关于"因式分解"：经核对 <code>00-册地图.md</code>，北师大版本章（1.1~1.7）只学幂运算、整式乘除与乘法公式，<strong>因式分解在八年级下册</strong>，本册期末不考。此处仅作衔接了解：乘法公式反过来用就是因式分解（如 a<sup>2</sup>−b<sup>2</sup>=(a+b)(a−b)）。<span class="warn" style="display:inline;padding:2px 6px;">待开学对课本目录核对</span></div>
+
+<h2>二、第二章 相交线与平行线</h2>
+<h3>2.1 相交线与三线八角</h3>
+<ul>
+  <li><strong>对顶角相等</strong>；<strong>邻补角互补</strong>（和 180°）。</li>
+  <li><strong>垂直</strong>：夹角 90°；<strong>点到直线的距离</strong> = 垂线段长度（垂线段最短）。</li>
+  <li>三线八角：<strong>同位角</strong>（F 形）、<strong>内错角</strong>（Z 形）、<strong>同旁内角</strong>（U 形）。</li>
+</ul>
+<h3>2.2 平行线的判定与性质（★方向相反，最易混）</h3>
+<table>
+  <tr><th>判定（角 → 平行）</th><th>性质（平行 → 角）</th></tr>
+  <tr><td>同位角相等 ⇒ 两直线平行</td><td>两直线平行 ⇒ 同位角相等</td></tr>
+  <tr><td>内错角相等 ⇒ 两直线平行</td><td>两直线平行 ⇒ 内错角相等</td></tr>
+  <tr><td>同旁内角互补 ⇒ 两直线平行</td><td>两直线平行 ⇒ 同旁内角互补</td></tr>
+</table>
+<ul>
+  <li><strong>平行传递性</strong>：a∥b 且 b∥c ⇒ a∥c。</li>
+  <li><strong>尺规作图</strong>：作等于已知角（SSS 思想）、过一点作已知直线的平行线。</li>
+</ul>
+<div class="warn">⚠️ 判定是"由角推平行"，性质是"由平行推角"，方向相反；<strong>同旁内角是互补（和180°），不是相等</strong>。</div>
+
+<h2>三、第三章 三角形</h2>
+<h3>3.1 认识三角形</h3>
+<ul>
+  <li><strong>三边关系</strong>：任意两边之和 &gt; 第三边（任意两边之差 &lt; 第三边）。如 3、4、5 能构成，3、4、7 不能。</li>
+  <li><strong>内角和 = 180°</strong>；<strong>外角 = 与它不相邻的两个内角之和</strong>。</li>
+  <li>按角分：锐角/直角/钝角三角形；按边分：不等边/等腰（含等边）三角形。</li>
+</ul>
+<h3>3.2 全等三角形（★期末压轴证明）</h3>
+<ul>
+  <li>全等记号 <strong>≌</strong>，对应顶点<strong>顺序要写对</strong>（A↔D，B↔E…）；对应边、对应角相等。</li>
+</ul>
+<table>
+  <tr><th>判定</th><th>含义</th><th>注意</th></tr>
+  <tr><td>SSS</td><td>三边对应相等</td><td>—</td></tr>
+  <tr><td>SAS</td><td>两边及其<strong>夹角</strong>对应相等</td><td>角必须是两边的<strong>夹角</strong></td></tr>
+  <tr><td>ASA</td><td>两角及其夹边对应相等</td><td>—</td></tr>
+  <tr><td>AAS</td><td>两角及一角的对边对应相等</td><td>—</td></tr>
+  <tr><td>HL</td><td>斜边和一条直角边对应相等</td><td><strong>只用于直角三角形</strong></td></tr>
+</table>
+<div class="warn">⚠️ <strong>SSA / AAA 一般不能</strong>判定全等！证明格式：先列出三个对应相等的条件，再写依据（SSS/SAS/ASA/AAS/HL）。常找隐藏条件：公共边、对顶角、平行带来的角相等。</div>
+
+<h2>四、第四章 变量之间的关系</h2>
+<table>
+  <tr><th>表示方法</th><th>特点</th><th>例子</th></tr>
+  <tr><td>表格</td><td>列举对应值，看变化趋势，直观但不全</td><td>时间与温度对应表</td></tr>
+  <tr><td>关系式</td><td><strong>因变量写左边</strong>，用自变量表示，最一般</td><td>正方形 S=x<sup>2</sup>，周长 C=4x</td></tr>
+  <tr><td>图象</td><td>横轴=自变量，纵轴=因变量，最直观</td><td>路程-时间（s-t）图</td></tr>
+</table>
+<ul>
+  <li><strong>自变量</strong>：主动变化的量（常是时间）；<strong>因变量</strong>：被决定的量（路程、费用等）。</li>
+  <li>读图先看<strong>横纵轴各是谁</strong>；<strong>水平段</strong>表示因变量不变（如休息、停车）。</li>
+  <li>速度 = 路程增量 ÷ 时间增量；分段图象要<strong>分段读、分段列式</strong>。</li>
+</ul>
+<div class="warn">⚠️ 自变量、因变量别搞反；"比…多 2"是加，"比…少 2"是减；实际问题注意取值范围（如边长&gt;0）。</div>
+
+<h2>五、第五章 生活中的轴对称</h2>
+<ul>
+  <li><strong>轴对称图形</strong>（一个图形沿某直线对折两边重合）vs <strong>成轴对称的两个图形</strong>（两个图形关于一条直线对称）。</li>
+  <li><strong>性质</strong>：对应点的连线被对称轴<strong>垂直平分</strong>；对应点到对称轴距离相等；对应线段、对应角相等（形状大小不变=全等）。</li>
+</ul>
+<table>
+  <tr><th>图形</th><th>对称轴条数 / 关键性质</th></tr>
+  <tr><td>等腰三角形</td><td>1 条；两底角相等；<strong>三线合一</strong>（顶角平分线、底边上的高、底边上的中线重合）</td></tr>
+  <tr><td>等边三角形</td><td>3 条；三个角都是 60°</td></tr>
+  <tr><td>长方形</td><td>2 条</td></tr>
+  <tr><td>正方形</td><td>4 条</td></tr>
+  <tr><td>线段</td><td>2 条（含中垂线）；中垂线上的点到两端点距离相等</td></tr>
+</table>
+<div class="warn">⚠️ 作对称点要<strong>过该点作对称轴的垂线</strong>再量相等距离，不能目测；"三线合一"的前提是<strong>等腰三角形 + 底边上的线</strong>。</div>
+
+<h2>六、第六章 概率初步</h2>
+<table>
+  <tr><th>事件类型</th><th>概率</th></tr>
+  <tr><td>必然事件</td><td>P = 1</td></tr>
+  <tr><td>不可能事件</td><td>P = 0</td></tr>
+  <tr><td>随机事件</td><td>0 &lt; P &lt; 1</td></tr>
+</table>
+<ul>
+  <li><strong>等可能事件概率</strong>：P(A) = 有利结果数 ÷ 所有等可能结果数 = m/n。</li>
+  <li>列举所有结果要<strong>不重不漏</strong>（硬币、骰子、摸球模型）；答案化成<strong>最简分数</strong>。</li>
+  <li><strong>频率估计概率</strong>：试验次数越多，频率越稳定，越接近概率。</li>
+</ul>
+<div class="warn">⚠️ <strong>频率 ≠ 概率</strong>（小样本波动大）；<strong>随机 ≠ 等可能</strong>，要先确认每种结果机会相同才能用 m/n；所有结果的概率之和 = 1。</div>
+
+<h2>七、高频易错对照表（考前再扫一遍）</h2>
+<table>
+  <tr><th>易错点</th><th>正确做法</th></tr>
+  <tr><td>同底数幂乘法 / 幂的乘方</td><td>指数相加 / 指数相乘</td></tr>
+  <tr><td>(a+b)<sup>2</sup> = a<sup>2</sup>+b<sup>2</sup>？</td><td>错！= a<sup>2</sup>+2ab+b<sup>2</sup>，中间有 2ab</td></tr>
+  <tr><td>(3x)<sup>2</sup> 算成 3x<sup>2</sup></td><td>= 9x<sup>2</sup>，系数也要平方</td></tr>
+  <tr><td>平方差 / 完全平方</td><td>(a+b)(a−b)是平方差；(a+b)(a+b)是完全平方</td></tr>
+  <tr><td>平行线判定 / 性质</td><td>角相等→平行（判定）；平行→角相等（性质）</td></tr>
+  <tr><td>同旁内角</td><td>互补（180°），不是相等</td></tr>
+  <tr><td>SAS 的角</td><td>必须是两边的夹角；SSA 一般不行</td></tr>
+  <tr><td>HL</td><td>只能用于直角三角形</td></tr>
+  <tr><td>读图横纵轴</td><td>横轴自变量、纵轴因变量；水平段=因变量不变</td></tr>
+  <tr><td>频率 / 概率</td><td>频率会波动，概率是稳定值</td></tr>
+</table>
+
+<h2>八、期末猜题（高频考点预测，非真题）</h2>
+<div class="warn">⚠️ 以下是结合知识库易错点和北师大版命题习惯的<strong>考点预测</strong>，<strong>不是真题</strong>，仅帮你把复习重点压到最可能考的地方，别当成"押中原题"。</div>
+<table>
+  <tr><th>#</th><th>预测考点</th><th>可能题型</th></tr>
+  <tr><td>1</td><td>幂的混合运算（同底乘/幂乘方/积乘方/负零指数）</td><td>选择、化简求值</td></tr>
+  <tr><td>2</td><td>乘法公式：完全平方/平方差，已知和与积求 a<sup>2</sup>+b<sup>2</sup></td><td>填空、化简、整体代入</td></tr>
+  <tr><td>3</td><td>平行线判定与性质综合求角度</td><td>选择、填空、几何说理</td></tr>
+  <tr><td>4</td><td>三角形全等证明（SAS/ASA/AAS）</td><td>★压轴几何证明</td></tr>
+  <tr><td>5</td><td>三边关系、内角和、外角求角度或判断能否构成三角形</td><td>选择、填空</td></tr>
+  <tr><td>6</td><td>变量关系：读 s-t 图象、列关系式、求速度/路程</td><td>图象应用题</td></tr>
+  <tr><td>7</td><td>等可能事件概率计算 + 列举法（硬币/骰子/摸球）</td><td>概率应用题</td></tr>
+  <tr><td>8</td><td>轴对称性质、对称轴条数、等腰三角形"三线合一"</td><td>选择、作图、证明</td></tr>
+</table>
+
+<!-- ========== 自测卷 ========== -->
+<div class="pagebreak">
+<header>
+  <h1>数学七下 · 期末自测卷（模拟）</h1>
+  <div class="meta">
+    <span>姓名：<span class="fill">小雨</span></span>
+    <span>日期：2026-06-18</span>
+    <span>用时：<span class="fill"></span>分钟</span>
+    <span>建议限时：60分钟</span>
+  </div>
+</header>
+<div class="tip">不计分，是学习工具。先独立做完，计算题要写过程，再点"显示全部答案"对照。难度配比≈ 基础:中档:压轴 = 6:3:1。</div>
+<div class="toolbar">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">显示全部答案</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">隐藏全部答案</button>
+</div>
+
+<div class="section">一、选择题（每题 4 分，共 24 分）</div>
+
+<div class="q">1. 计算 a<sup>3</sup>·a<sup>2</sup> 的结果是 <span class="kp">[同底数幂乘法]</span>
+  <div class="options"><div>A. a<sup>5</sup></div><div>B. a<sup>6</sup></div><div>C. a<sup>8</sup></div><div>D. 2a<sup>5</sup></div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">同底数幂相乘，底不变指数相加：a<sup>3</sup>·a<sup>2</sup>=a<sup>3+2</sup>=a<sup>5</sup>。</div></details>
+</div>
+
+<div class="q">2. 计算 (a<sup>3</sup>)<sup>2</sup> 的结果是 <span class="kp">[幂的乘方]</span>
+  <div class="options"><div>A. a<sup>5</sup></div><div>B. a<sup>6</sup></div><div>C. a<sup>9</sup></div><div>D. 2a<sup>3</sup></div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">幂的乘方，底不变指数相乘：(a<sup>3</sup>)<sup>2</sup>=a<sup>3×2</sup>=a<sup>6</sup>。注意别和第 1 题的"相加"混。</div></details>
+</div>
+
+<div class="q">3. 下列各组线段，能构成三角形的是 <span class="kp">[三边关系]</span>
+  <div class="options"><div>A. 1，2，3</div><div>B. 3，4，8</div><div>C. 3，4，5</div><div>D. 2，2，5</div></div>
+  <details><summary>答案与解析</summary><div class="ans">C</div><div class="sol">两边之和要大于第三边。A：1+2=3 不大于 3，不行；B：3+4=7&lt;8，不行；D：2+2=4&lt;5，不行；C：3+4=5+... 取最短两边 3+4=7&gt;5，成立。</div></details>
+</div>
+
+<div class="q">4. 如图两直线被第三条直线所截，下列条件能判定 a∥b 的是 <span class="kp">[平行线判定]</span>
+  <div class="options"><div>A. 同位角相等</div><div>B. 同旁内角相等</div><div>C. 内错角互补</div><div>D. 对顶角相等</div></div>
+  <details><summary>答案与解析</summary><div class="ans">A</div><div class="sol">判定平行：同位角相等、内错角相等、同旁内角互补。B 错（同旁内角应互补不是相等）；C 错（内错角应相等不是互补）；D 对顶角任何时候都相等，与平行无关。</div></details>
+</div>
+
+<div class="q">5. 下列图形中，对称轴恰好有 4 条的是 <span class="kp">[轴对称]</span>
+  <div class="options"><div>A. 长方形</div><div>B. 正方形</div><div>C. 等边三角形</div><div>D. 等腰三角形</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">正方形 4 条，长方形 2 条，等边三角形 3 条，等腰三角形 1 条。</div></details>
+</div>
+
+<div class="q">6. 掷一枚均匀的骰子，朝上点数大于 4 的概率是 <span class="kp">[等可能概率]</span>
+  <div class="options"><div>A. 1/6</div><div>B. 1/3</div><div>C. 1/2</div><div>D. 2/3</div></div>
+  <details><summary>答案与解析</summary><div class="ans">B</div><div class="sol">点数共 6 种等可能结果，大于 4 的是 5、6 两种，P=2/6=1/3。</div></details>
+</div>
+
+<div class="section">二、填空题（每空 3 分，共 24 分）</div>
+
+<div class="q">7. 计算：5<sup>0</sup> = ______（5≠0）；3<sup>−2</sup> = ______。 <span class="kp">[零指数/负指数]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">1；1/9</div><div class="sol">非零数的零次幂为 1；负整数指数幂变倒数：3<sup>−2</sup>=1/3<sup>2</sup>=1/9。</div></details>
+</div>
+
+<div class="q">8. 用乘法公式计算：(x+4)(x−4) = ______；(a−3)<sup>2</sup> = ______。 <span class="kp">[乘法公式]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">x<sup>2</sup>−16；a<sup>2</sup>−6a+9</div><div class="sol">平方差：(x+4)(x−4)=x<sup>2</sup>−4<sup>2</sup>=x<sup>2</sup>−16。完全平方：(a−3)<sup>2</sup>=a<sup>2</sup>−2·a·3+3<sup>2</sup>=a<sup>2</sup>−6a+9，<strong>中间项别漏 −6a</strong>。</div></details>
+</div>
+
+<div class="q">9. 用边长 x 表示正方形的面积 S，关系式是 S = ______，其中自变量是 ______。 <span class="kp">[变量关系式]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">x<sup>2</sup>；x（边长）</div><div class="sol">因变量 S 写左边，用自变量 x 表示：S=x<sup>2</sup>。边长 x 是主动变的量，是自变量。</div></details>
+</div>
+
+<div class="q">10. 一个三角形的两个内角分别是 50° 和 60°，则第三个内角是 ______；与这个 50° 角不相邻的外角是 ______。 <span class="kp">[内角和/外角]</span>
+  <div class="answerline"></div>
+  <details><summary>答案与解析</summary><div class="ans">70°；130°</div><div class="sol">第三角=180°−50°−60°=70°。外角=与它不相邻的两个内角之和；与 50° 角不相邻的外角 = 50°+... 即另两个内角 60°+70°=130°（也等于 180°−50°）。</div></details>
+</div>
+
+<div class="section">三、计算与化简题（每题 8 分，共 24 分，要写过程）</div>
+
+<div class="q">11. 计算：(−2a<sup>2</sup>b)<sup>3</sup>。 <span class="kp">[积的乘方/幂的乘方]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">−8a<sup>6</sup>b<sup>3</sup></div>
+  <div class="sol">积的乘方，每个因式分别乘方：(−2a<sup>2</sup>b)<sup>3</sup> = (−2)<sup>3</sup>·(a<sup>2</sup>)<sup>3</sup>·b<sup>3</sup> = −8·a<sup>6</sup>·b<sup>3</sup> = −8a<sup>6</sup>b<sup>3</sup>。注意：系数 −2 也要立方，(a<sup>2</sup>)<sup>3</sup> 是幂的乘方指数相乘得 a<sup>6</sup>。</div></details>
+</div>
+
+<div class="q">12. 化简：(a+2)<sup>2</sup> − (a+1)(a−1)。 <span class="kp">[完全平方+平方差]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">4a+5</div>
+  <div class="sol">先分别用公式展开：(a+2)<sup>2</sup>=a<sup>2</sup>+4a+4；(a+1)(a−1)=a<sup>2</sup>−1。<br>相减：(a<sup>2</sup>+4a+4) − (a<sup>2</sup>−1) = a<sup>2</sup>+4a+4−a<sup>2</sup>+1 = 4a+5。<br>注意第二个括号前是减号，去括号时 −(a<sup>2</sup>−1) 要变成 −a<sup>2</sup>+1。</div></details>
+</div>
+
+<div class="q">13. 已知 a+b=5，ab=6，求 a<sup>2</sup>+b<sup>2</sup> 与 (a−b)<sup>2</sup> 的值。 <span class="kp">[完全平方整体代入]</span>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">a<sup>2</sup>+b<sup>2</sup>=13；(a−b)<sup>2</sup>=1</div>
+  <div class="sol">由 (a+b)<sup>2</sup>=a<sup>2</sup>+2ab+b<sup>2</sup> 得 a<sup>2</sup>+b<sup>2</sup>=(a+b)<sup>2</sup>−2ab=5<sup>2</sup>−2×6=25−12=13。<br>(a−b)<sup>2</sup>=a<sup>2</sup>−2ab+b<sup>2</sup>=(a<sup>2</sup>+b<sup>2</sup>)−2ab=13−12=1。<br>这类题不用先求出 a、b，整体代入更快。</div></details>
+</div>
+
+<div class="section">四、几何证明题（10 分）</div>
+
+<div class="q">14. 如图，点 B、D 在 ∠A 内部，AB 平分 ∠CAD（即 ∠CAB=∠DAB），且 AC=AD。求证：BC=BD。 <span class="kp">[全等证明 SAS]</span>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">证 △ABC≌△ABD（SAS），得 BC=BD。</div>
+  <div class="sol">证明：在 △ABC 和 △ABD 中，<br>　AC = AD（已知），<br>　∠CAB = ∠DAB（AB 平分 ∠CAD），<br>　AB = AB（公共边），<br>∴ △ABC ≌ △ABD（SAS）。<br>∴ BC = BD（全等三角形对应边相等）。<br><strong>关键</strong>：夹角 ∠CAB、∠DAB 正好夹在两组对应边 AC/AD 与公共边 AB 之间，符合 SAS；公共边 AB 是隐藏条件，别忘写。</div></details>
+</div>
+
+<div class="section">五、应用题（图象 / 概率，共 14 分）</div>
+
+<div class="q">15.（6 分）一个不透明袋子里有大小相同的小球，其中红球 3 个、白球 2 个。搅匀后从中任意摸出 1 个球。 <span class="kp">[等可能概率]</span>
+  <p>（1）摸到红球的概率是多少？（2）摸到白球的概率是多少？（3）两者之和等于多少？说明了什么？</p>
+  <div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">（1）3/5　（2）2/5　（3）和为 1，说明红、白是仅有的两类等可能结果，所有结果概率之和为 1。</div>
+  <div class="sol">球共 3+2=5 个，每个被摸到机会相同（等可能）。<br>（1）P(红)=红球数/总数=3/5。<br>（2）P(白)=2/5。<br>（3）3/5+2/5=1。袋中只有红、白两种球，必摸到其一，所有等可能结果的概率和恒为 1。</div></details>
+</div>
+
+<div class="q">16.（8 分，压轴）小明从家出发匀速骑车去图书馆，路上停下来买水休息了一会儿，再匀速骑到图书馆。下图是他离家的路程 s（千米）与时间 t（分钟）的关系图象（s-t 图）：<br>
+  · O→A 段：从 t=0 到 t=10 分钟，s 由 0 上升到 2 千米；<br>
+  · A→B 段：从 t=10 到 t=15 分钟，s 保持 2 千米不变；<br>
+  · B→C 段：从 t=15 到 t=30 分钟，s 由 2 千米上升到 5 千米。 <span class="kp">[变量·读图象]</span>
+  <p>（1）自变量、因变量各是什么？（2）哪一段表示他在休息？休息了多少分钟？（3）出发前 10 分钟（O→A 段）的骑车速度是多少？（4）全程从家到图书馆一共多少千米？</p>
+  <div class="answerline"></div><div class="answerline"></div><div class="answerline"></div>
+  <details><summary>答案与解析</summary>
+  <div class="ans">（1）自变量 t（时间），因变量 s（路程）。（2）A→B 段休息，休息 5 分钟。（3）0.2 千米/分钟（即 12 千米/小时）。（4）5 千米。</div>
+  <div class="sol">（1）横轴是时间 t，为自变量；纵轴是路程 s，为因变量。<br>（2）水平段表示路程不变（人没动）=休息：A→B 从 10 到 15 分钟，休息 15−10=5 分钟。<br>（3）速度=路程增量÷时间增量=（2−0）千米÷（10−0）分钟=0.2 千米/分钟（换算 0.2×60=12 千米/小时）。<br>（4）到达图书馆时（C 点）离家最远，s=5 千米，即全程 5 千米。<br><strong>提醒</strong>：读图先认清横纵轴各代表谁，水平段=因变量不变，速度要用"增量÷增量"。</div></details>
+</div>
+
+</div>
+</body>
+</html>

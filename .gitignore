@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# 学情真实数据（仅本地，绝不上传）
+学情/
+
+# 错题本：孩子真实错题与重做记录（仅本地，公开库用 templates/错题卡模板.md 示范格式）
+错题本/
+
+# 密钥（绝不提交）
+.env
+.env.local
+*.key
+credentials.json
+
+# 运行时日志
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 编辑器
+.idea/
+*.swp
